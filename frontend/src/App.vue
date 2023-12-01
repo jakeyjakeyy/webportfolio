@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue'
-import HomeView from './views/HomeView.vue';
 import Footer from './components/Footer.vue';
-
+import ContentView from './views/ContentView.vue';
 </script>
 
 <template>
@@ -16,9 +15,7 @@ import Footer from './components/Footer.vue';
         
       </div>
     </header>
-    <div class="about">
-      <HomeView />
-    </div>
+    <ContentView />
     <div class="footer">
       <Footer />
     </div>
@@ -41,8 +38,10 @@ header {
   padding: 1rem 1rem;
 }
 
-.about {
-  padding-left: 5rem;
+.content {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 2.5rem;
 }
 
 .logo {
