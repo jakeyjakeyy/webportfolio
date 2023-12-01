@@ -34,7 +34,6 @@ let contentSelection = ref("Home");
             Contact
         </button>
         </div>
-        <h1>{{ contentSelection }}</h1>
         <div v-if="contentSelection === 'Home'">
             <p>Thanks for vising my web portfolio!</p>
             <p>I'd love to hear from you, click <a href="mailto:jakerichards210@gmail.com">here</a> to send me an email, or view the Contact page to see my other contact information.</p>
