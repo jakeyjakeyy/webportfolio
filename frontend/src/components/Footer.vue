@@ -13,8 +13,6 @@
 
 <style scoped>
 footer {
-    position: fixed;
-    bottom: 0;
     width: 100%;
     height: 2.5rem;
     background-color: var(--color-background-soft);

@@ -1,0 +1,9 @@
+{
+  "grammarly.selectors": [
+    {
+      "language": "vue",
+      "scheme": "file",
+      "pattern": "frontend/src/views/ContentView.vue"
+    }
+  ]
+}

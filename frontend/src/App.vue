@@ -29,6 +29,7 @@ import ContentView from './views/ContentView.vue';
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  height: 100%;
   width: 100vw;
   margin: 0;
 }
