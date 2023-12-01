@@ -40,9 +40,10 @@ header {
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
-  margin-bottom: 2.5rem;
 }
 
 .logo {

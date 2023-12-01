@@ -47,7 +47,6 @@ let contentSelection = ref("Home");
 <style scoped>
 .content {
     padding: 1rem 1rem;
-    flex: 1 0 auto;
 }
 .selections {
     display: flex;
