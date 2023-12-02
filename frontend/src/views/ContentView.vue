@@ -1,7 +1,24 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import About from '@/components/About.vue';
 let contentSelection = ref("Home");
+let handlingPopstate = ref(false)
+history.pushState({contentSelection: contentSelection.value}, '');
+
+watch(contentSelection, (newContentSelection,) => {
+    if (!handlingPopstate.value) {
+        history.pushState({contentSelection: newContentSelection}, '');
+    }
+})
+
+window.addEventListener('popstate', (event) => {
+    handlingPopstate.value = true;
+    if (event.state && event.state.contentSelection) {
+        contentSelection.value = event.state.contentSelection;
+    }
+    handlingPopstate.value = false;
+})
+
 </script>
 
 <template>
@@ -65,10 +82,11 @@ let contentSelection = ref("Home");
     font-size: 1rem;
     font-weight: 500;
     color: var(--color-text);
-    transition: background-color 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
-.contentSelectionButton:hover {
+.contentSelectionButton:hover, .contentSelectionButton:focus {
     background-color: var(--color-background);
+    box-shadow: 0 0 0 2px var(--color-accent);
 }
 
 .contentSelectionButton.active {

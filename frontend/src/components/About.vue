@@ -115,11 +115,10 @@
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    justify-content: center;
     background-color: var(--color-background-soft);
     border: 1px solid var(--color-background-soft);
     border-radius: 1rem;
-    width: fit-content;
+    width: 75%
 }
 
 .containerLeft, .containerRight {
@@ -127,7 +126,7 @@
     flex-direction: column;
 }
 .containerLeft {
-    width: 75%;
+    width: 85%;
     margin-right: 1rem;
 }
 

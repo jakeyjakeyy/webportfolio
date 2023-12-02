@@ -4,7 +4,7 @@
 <template>
     <footer>
         <div class="footer">
-            <a href="https://www.github.com/jakeyjakeyy" target="_blank">
+            <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
                 <v-icon name="fa-github" scale="1.25" />
             </a>
         </div>

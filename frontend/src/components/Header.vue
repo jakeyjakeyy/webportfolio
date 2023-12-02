@@ -6,7 +6,8 @@
   <div class="header">
     <h1 class="green">Jake Richards</h1>
     <h3>
-      Web Development and Software Engineering
+      <!-- Web Development and Software Engineering -->
+      Web and Software Development
     </h3>
   </div>
 </template>
