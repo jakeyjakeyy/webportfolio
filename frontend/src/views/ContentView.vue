@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import About from '@/components/About.vue';
+import Projects from '@/components/Projects.vue';
 let contentSelection = ref("Home");
 let handlingPopstate = ref(false)
 history.pushState({contentSelection: contentSelection.value}, '');
@@ -57,6 +58,11 @@ window.addEventListener('popstate', (event) => {
         </div>
         <div v-if="contentSelection === 'About'">
             <About />
+        </div>
+        <div v-if="contentSelection === 'Projects'">
+            <Suspense>
+                <Projects />
+            </Suspense>
         </div>
     </div>
 </template>
