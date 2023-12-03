@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import {ref} from 'vue';
+import PieChart from './PieChart.vue';
 import githubInfo from '../utils/githubInfo';
 
 const githubInfoData = ref(await githubInfo("jakeyjakeyy"));
+
 
 </script>
 
@@ -14,7 +16,9 @@ const githubInfoData = ref(await githubInfo("jakeyjakeyy"));
         </div>
         <div class="languages">
             <h2>Languages</h2>
-            <p>{{ githubInfoData.languagePercentages }}</p>
+            <Suspense>
+                <PieChart />
+            </Suspense>
         </div>
     </div>
 </template>

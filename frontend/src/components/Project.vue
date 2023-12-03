@@ -6,7 +6,6 @@
         link: String,
         technologies: Array    
     })
-    console.log(Image)
 </script>
 
 <template>
