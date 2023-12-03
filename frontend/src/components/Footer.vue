@@ -4,9 +4,11 @@
 <template>
     <footer>
         <div class="footer">
-            <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
-                <v-icon name="fa-github" scale="1.25" />
-            </a>
+            <div class="icon">
+                <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
+                    <v-icon name="fa-github" scale="1.25" />
+                </a>
+            </div>
         </div>
     </footer>
 </template>
@@ -19,6 +21,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.icon {
+    width: 25px;
+    height: 25px;
 }
 </style>
 ```

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import {ref} from 'vue';
 import githubInfo from './githubInfo.vue';
+import Project from './Project.vue';
+import dfchronicles from '../../public/dfchronicles.png';
 
 </script>
 
@@ -13,10 +15,12 @@ import githubInfo from './githubInfo.vue';
             </Suspense>
         </div>
         <div class="projects">
-            <div class="project">
-                <h2>Dwarf Fortress Chronicles</h2>
-                <p>A webapp that takes a user's game data as input, parses that data, and generates stories by making requests to the OpenAI API</p>
-            </div>
+            <Project 
+            :image="dfchronicles"
+            title="Dwarf Fortress Chronicles"
+            description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
+            :technologies="['React', 'Django', 'PostgreSQL', 'Docker']"
+            />
         </div>
     </div>
 </template>
@@ -41,7 +45,7 @@ import githubInfo from './githubInfo.vue';
 }
 
 .project {
-    min-height: 30rem;
+    height: 30rem;
     border: 1px solid var(--color-background-soft);
 }
 
