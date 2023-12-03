@@ -17,40 +17,37 @@
                     </div>
                 </div>
             </div>
-        <div class="listDiv">
-            <div class="list">
-                <h2 class="listHead">Certifications and Education</h2>
-                <ul>
-                    <li>HarvardX </li>
+            <div class="listDiv">
+                <div class="list">
+                    <h2 class="listHead">Certifications and Education</h2>
                     <ul>
-                        <li>Dates Attended</li>
+                        <li>HarvardX </li>
                         <ul>
-                            <li>2023</li>
+                            <li>Dates Attended</li>
+                            <ul>
+                                <li>2023</li>
+                            </ul>
+                            <li>Degree</li>
+                            <ul>
+                                <li>Certificate in Web Programming with Python and JavaScript</li>
+                                <li>Certificate in Introduction to Computer Science</li>
+                            </ul>
                         </ul>
-                        <li>Degree</li>
+                        <li>Live Oak</li>
                         <ul>
-                            <li>Certificate in Web Programming with Python and JavaScript</li>
-                            <li>Certificate in Introduction to Computer Science</li>
+                            <li>Dates Attended</li>
+                            <ul>
+                                <li>2012-2016</li>
+                            </ul>
+                            <li>Degree</li>
+                            <ul>
+                                <li>High School Diploma</li>
+                            </ul>
                         </ul>
                     </ul>
-                    <li>Live Oak</li>
-                    <ul>
-                        <li>Dates Attended</li>
-                        <ul>
-                            <li>2012-2016</li>
-                        </ul>
-                        <li>Degree</li>
-                        <ul>
-                            <li>High School Diploma</li>
-                        </ul>
-                    </ul>
-                </ul>
+                </div>
             </div>
-        </div>
-            <!-- <div class="list">
-                <h2 class="listHead">Experience</h2>
-                <p>For years I have been a hobbyist programmer, making small programs for reminders or note taking. After deciding to pursue programming as a career in the beginning of 2023 I have been working on projects and taking classes to hone my skills and learn new technologies.</p>
-            </div>   -->
+   
         </div>
         <br>
         <div class="containerRight">

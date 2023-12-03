@@ -27,31 +27,27 @@ window.addEventListener('popstate', (event) => {
     <div class="content">
         <div class="selections">
             <button
-            tabindex="0"
             @click="contentSelection='Home'" 
             @keyup.enter.space="contentSelection='Home'"
             :class="{active: contentSelection === 'Home'}" class="contentSelectionButton">
             Home
             </button>
             <button
-            tabindex="0"
             @click="contentSelection='About'" 
             @keyup.enter.space="contentSelection='About'"
             :class="{active: contentSelection === 'About'}" class="contentSelectionButton">
             About
             </button>
             <button
-            tabindex="0"
             @click="contentSelection='Projects'" 
             :class="{active: contentSelection === 'Projects'}" class="contentSelectionButton">
             Projects
             </button>
             <button
-            tabindex="0"
             @click="contentSelection='Contact'" 
             :class="{active: contentSelection === 'Contact'}" class="contentSelectionButton">
             Contact
-        </button>
+            </button>
         </div>
         <div v-if="contentSelection === 'Home'">
             <p>Thanks for vising my web portfolio!</p>
@@ -61,9 +57,7 @@ window.addEventListener('popstate', (event) => {
             <About />
         </div>
         <div v-if="contentSelection === 'Projects'">
-            <Suspense>
-                <Projects />
-            </Suspense>
+            <Projects />
         </div>
     </div>
 </template>
