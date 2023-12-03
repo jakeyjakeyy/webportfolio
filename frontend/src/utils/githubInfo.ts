@@ -1,3 +1,5 @@
+// move this to backend later to use api key for more information from private repos
+
 interface Repo {
   name: string;
 }

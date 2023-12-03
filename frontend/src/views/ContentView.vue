@@ -8,16 +8,22 @@ history.pushState({contentSelection: contentSelection.value}, '');
 
 watch(contentSelection, (newContentSelection,) => {
     if (!handlingPopstate.value) {
+        console.log("pushing state");
+        console.log(handlingPopstate.value);
         history.pushState({contentSelection: newContentSelection}, '');
     }
+    handlingPopstate.value = false;
 })
 
 window.addEventListener('popstate', (event) => {
+    console.log("popstate");
     handlingPopstate.value = true;
     if (event.state && event.state.contentSelection) {
+        console.log("setting content selection");
         contentSelection.value = event.state.contentSelection;
+        console.log(handlingPopstate.value);
+        console.log(contentSelection.value);
     }
-    handlingPopstate.value = false;
 })
 
 </script>
