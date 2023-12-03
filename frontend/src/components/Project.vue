@@ -22,7 +22,10 @@
                 <p>{{ description }}</p>
             </div>
             <div class="technologies">
-                <p>{{ technologies }}</p>
+                <h3>Technologies</h3>
+                <ul>
+                    <li v-for="technology in technologies">{{ technology }}</li>
+                </ul>
             </div>
             <div class="link">
                 <a :href="link">Link</a>
