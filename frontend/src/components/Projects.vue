@@ -11,8 +11,8 @@ console.log(githubInfoData);
     <div class="projects">
         <h1>Projects</h1>
         <div class="project">
-            <h2>Project 1</h2>
-            <p>Project 1 description</p>
+            <h2>Dwarf Fortress Chronicles</h2>
+            <p>A webapp that takes a user's game data as input, parses that data, and generates stories by making requests to the OpenAI API</p>
         </div>
         <div class="githubInfo">
             <div class="lastActive">

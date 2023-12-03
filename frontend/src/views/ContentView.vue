@@ -8,8 +8,6 @@ history.pushState({contentSelection: contentSelection.value}, '');
 
 watch(contentSelection, (newContentSelection,) => {
     if (!handlingPopstate.value) {
-        console.log("pushing state");
-        console.log(handlingPopstate.value);
         history.pushState({contentSelection: newContentSelection}, '');
     }
     handlingPopstate.value = false;
@@ -19,10 +17,7 @@ window.addEventListener('popstate', (event) => {
     console.log("popstate");
     handlingPopstate.value = true;
     if (event.state && event.state.contentSelection) {
-        console.log("setting content selection");
         contentSelection.value = event.state.contentSelection;
-        console.log(handlingPopstate.value);
-        console.log(contentSelection.value);
     }
 })
 
@@ -94,7 +89,7 @@ window.addEventListener('popstate', (event) => {
     font-size: 1rem;
     font-weight: 500;
     color: var(--color-text);
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .contentSelectionButton:hover, .contentSelectionButton:focus {
     background-color: var(--color-background);
