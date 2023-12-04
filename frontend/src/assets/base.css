@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --vt-c-white: #ffffff;
@@ -62,7 +63,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: linear-gradient(180deg, #1e1e1e 25%, #211e40 30%, #211e40 55%, #1e1e1e 60%);
+  background: linear-gradient(180deg, #1e1e1e 25%, #211e40 30%, #211e40 60%, #1e1e1e 65%);
   transition:
     color 0.5s,
     background-color 0.5s;
@@ -70,8 +71,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 
 body {
   font-family: 'Poppins';

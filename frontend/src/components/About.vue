@@ -3,6 +3,7 @@
 
 <template>
  <div class="aboutContainer">
+    <h3>About</h3>
     <div class="listContainer">
         <div class="containerLeft">
             <div class="listDiv" id="top">
@@ -93,12 +94,16 @@
 </template>
 
 <style scoped>
+h3 {
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 }
 
 .about {

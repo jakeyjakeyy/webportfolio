@@ -6,7 +6,7 @@ const interval = ref(0);
 
 const change = () => {
   const last = index.value;
-  index.value = Math.floor(Math.random() * list.length);
+  index.value = (index.value + 1) % list.length;
   if (last === index.value) {
     change();
   }
@@ -15,15 +15,6 @@ const change = () => {
 const start = () => {
   interval.value = setInterval(change, 3000);
 };
-
-const stop = () => {
-  clearInterval(interval.value);
-};
-
-watch(index, () => {
-  stop();
-  start();
-});
 
 onMounted(() => {
   index.value = Math.floor(Math.random() * list.length);
@@ -69,6 +60,7 @@ h3 {
   text-align: center;
   height: 100vh;
   min-height: fit-content;
+  margin-bottom: 50px;
 }
 .description {
   display: flex;
