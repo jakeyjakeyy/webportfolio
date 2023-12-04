@@ -36,11 +36,11 @@ const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifferen
 <template>
     <div class="githubInfo">
         <div class="lastActive">
-            <h2>Last Active</h2>
+            <h4>Last Active</h4>
             <p>{{ timeDifferenceFormatted }}</p>
         </div>
         <div class="languages">
-            <h2>Languages</h2>
+            <h4>Languages</h4>
             <PieChart :data="chartData" />
         </div>
     </div>

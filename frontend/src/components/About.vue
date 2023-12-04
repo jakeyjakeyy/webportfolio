@@ -7,7 +7,7 @@
         <div class="containerLeft">
             <div class="listDiv" id="top">
                 <div class="list">
-                    <h2 class="listHead">About</h2>
+                    <h3 class="listHead">About</h3>
                     <div class="about">
                         <p>I am a passionate and motivated software developer with experience in technologies such as Python, JavaScript, React, Vue, and Django.</p>
                         <p>The opportunity to constantly learn and improve my skills as a developer drives me every day. I am proud to hold certificates from HarvardX, in both <a href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"> Web Programming with Python and JavaScript</a>, and <a href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter">Introduction to Computer Science</a>.</p>
@@ -19,7 +19,7 @@
             </div>
             <div class="listDiv">
                 <div class="list">
-                    <h2 class="listHead">Certifications and Education</h2>
+                    <h3 class="listHead">Certifications and Education</h3>
                     <ul>
                         <li>HarvardX </li>
                         <ul>
@@ -52,7 +52,7 @@
         <br>
         <div class="containerRight">
             <div class="list">
-                <h2 class="listHead">Skills</h2>
+                <h3 class="listHead">Skills</h3>
                 <ul>
                     <li>Programming Languages</li>
                     <ul>

@@ -8,14 +8,14 @@ import dfchronicles from '../../public/dfchronicles.png';
 
 <template>
     <div class="projectContainer">
-        <h1>Git Data</h1>
+        <h3>Git Data</h3>
         <div class="githubInfoContainer">
             <Suspense>
                 <githubInfo />
             </Suspense>
         </div>
         <div class="projects">
-            <h1>Projects</h1>
+            <h3>Projects</h3>
             <Project 
             :image="dfchronicles"
             title="Dwarf Fortress Chronicles"
