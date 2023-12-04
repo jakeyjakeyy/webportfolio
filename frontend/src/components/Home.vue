@@ -1,6 +1,98 @@
 <script setup lang="ts">
+import { ref, watch, onMounted } from 'vue';
+const list = ["Web", "Software", "Backend", "Frontend"];
+const index = ref(0);
+const interval = ref(0);
+
+const change = () => {
+  const last = index.value;
+  index.value = Math.floor(Math.random() * list.length);
+  if (last === index.value) {
+    change();
+  }
+};
+
+const start = () => {
+  interval.value = setInterval(change, 3000);
+};
+
+const stop = () => {
+  clearInterval(interval.value);
+};
+
+watch(index, () => {
+  stop();
+  start();
+});
+
+onMounted(() => {
+  index.value = Math.floor(Math.random() * list.length);
+  start();
+});
+
 </script>
 
 <template>
-
+  <div class="home">
+    <div class="welcome">
+      <div class="name">
+        <h1 class="green">Jake</h1>
+        <h1 class="blue">Richards</h1>
+      </div>
+      <div class="description">
+        <h3 class="dynamic">{{ list[index] }}</h3>
+        <h3>Development</h3>
+      </div>
+    </div>
+    <div class="button">
+      <v-icon name="bi-arrow-down-circle" scale="2" />
+    </div>
+  </div>
 </template>
+
+<style scoped>
+h1 {
+  font-weight: bold;
+  position: relative;
+  top: -10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  min-height: fit-content;
+}
+.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.dynamic {
+  margin-right: 0.5rem;
+  color: var(--color-accent);
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
+}
+.button {
+  position: absolute;
+  cursor: pointer;
+  margin-top: 90vh;
+}
+
+@media (min-width: 1024px) {
+  .greetings h1,
+  .greetings h3 {
+    text-align: left;
+  }
+}
+</style>

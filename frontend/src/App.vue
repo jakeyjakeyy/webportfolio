@@ -1,20 +1,11 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Header from './components/Header.vue'
 import Footer from './components/Footer.vue';
 import ContentView from './views/ContentView.vue';
 </script>
 
 <template>
   <div class="app">
-    <header>
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-      <div class="wrapper">
-        <Header />
-        
-      </div>
-    </header>
     <ContentView />
     <div class="footer">
       <Footer />

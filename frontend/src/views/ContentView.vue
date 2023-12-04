@@ -1,64 +1,17 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
+import Home from '@/components/Home.vue';
 import About from '@/components/About.vue';
 import Projects from '@/components/Projects.vue';
-let contentSelection = ref("Home");
-let handlingPopstate = ref(false)
-history.pushState({contentSelection: contentSelection.value}, '');
 
-watch(contentSelection, (newContentSelection,) => {
-    if (!handlingPopstate.value) {
-        history.pushState({contentSelection: newContentSelection}, '');
-    }
-    handlingPopstate.value = false;
-})
-
-window.addEventListener('popstate', (event) => {
-    console.log("popstate");
-    handlingPopstate.value = true;
-    if (event.state && event.state.contentSelection) {
-        contentSelection.value = event.state.contentSelection;
-    }
-})
 
 </script>
 
 <template>
     <div class="content">
-        <div class="selections">
-            <button
-            @click="contentSelection='Home'" 
-            @keyup.enter.space="contentSelection='Home'"
-            :class="{active: contentSelection === 'Home'}" class="contentSelectionButton">
-            Home
-            </button>
-            <button
-            @click="contentSelection='About'" 
-            @keyup.enter.space="contentSelection='About'"
-            :class="{active: contentSelection === 'About'}" class="contentSelectionButton">
-            About
-            </button>
-            <button
-            @click="contentSelection='Projects'" 
-            :class="{active: contentSelection === 'Projects'}" class="contentSelectionButton">
-            Projects
-            </button>
-            <button
-            @click="contentSelection='Contact'" 
-            :class="{active: contentSelection === 'Contact'}" class="contentSelectionButton">
-            Contact
-            </button>
-        </div>
-        <div v-if="contentSelection === 'Home'">
-            <p>Thanks for vising my web portfolio!</p>
-            <p>I'd love to hear from you, click <a href="mailto:jakerichards210@gmail.com">here</a> to send me an email, or view the Contact page to see my other contact information.</p>
-        </div>
-        <div v-if="contentSelection === 'About'">
-            <About />
-        </div>
-        <div v-if="contentSelection === 'Projects'">
-            <Projects />
-        </div>
+        <Home />
+        <About />
+        <Projects />
     </div>
 </template>
 

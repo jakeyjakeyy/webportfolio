@@ -32,6 +32,7 @@ import dfchronicles from '../../public/dfchronicles.png';
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
 }
 
 .githubInfoContainer {
