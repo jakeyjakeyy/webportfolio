@@ -31,14 +31,8 @@ import dfchronicles from '../../public/dfchronicles.png'
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    180deg,
-    var(--color-background-soft) -10%,
-    var(--color-background) 15%,
-    var(--color-background) 50%,
-    var(--color-background) 85%,
-    var(--color-background-soft) 110%
-  );
+  background: var(--color-background);
+  padding: 0 2rem 0;
 }
 
 .githubInfoContainer {

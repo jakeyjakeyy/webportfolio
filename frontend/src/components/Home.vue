@@ -57,14 +57,7 @@ h3 {
   text-align: center;
   height: 100vh;
   min-height: fit-content;
-  background: linear-gradient(
-    180deg,
-    var(--color-background-soft) -10%,
-    var(--color-background) 15%,
-    var(--color-background) 50%,
-    var(--color-background) 85%,
-    var(--color-background-soft) 110%
-  );
+  background-color: var(--color-background);
 }
 .description {
   display: flex;

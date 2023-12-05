@@ -1,27 +1,26 @@
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue'
-const props = defineProps({
-  contentSelection: String
-})
-
-const emit = defineEmits(['update:contentSelection'])
-
+let contentSelection: String = 'home'
 const up = () => {
-  if (props.contentSelection === 'home') {
-    emit('update:contentSelection', 'projects')
-  } else if (props.contentSelection === 'projects') {
-    emit('update:contentSelection', 'about')
-  } else if (props.contentSelection === 'about') {
-    emit('update:contentSelection', 'home')
+  if (contentSelection === 'about') {
+    const element = document.getElementById('homeContainer')
+    element?.scrollIntoView({ behavior: 'smooth' })
+    contentSelection = 'home'
+  } else if (contentSelection === 'projects') {
+    const element = document.getElementById('aboutContainer')
+    element?.scrollIntoView({ behavior: 'smooth' })
+    contentSelection = 'about'
   }
 }
 const down = () => {
-  if (props.contentSelection === 'home') {
-    emit('update:contentSelection', 'about')
-  } else if (props.contentSelection === 'about') {
-    emit('update:contentSelection', 'projects')
-  } else if (props.contentSelection === 'projects') {
-    emit('update:contentSelection', 'home')
+  console.log(contentSelection)
+  if (contentSelection === 'home') {
+    const element = document.getElementById('aboutContainer')
+    element?.scrollIntoView({ behavior: 'smooth' })
+    contentSelection = 'about'
+  } else if (contentSelection === 'about') {
+    const element = document.getElementById('projectContainer')
+    element?.scrollIntoView({ behavior: 'smooth' })
+    contentSelection = 'projects'
   }
 }
 </script>

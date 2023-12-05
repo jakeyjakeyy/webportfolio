@@ -134,14 +134,8 @@ ul {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(
-    180deg,
-    var(--color-background-soft) -10%,
-    var(--color-background) 15%,
-    var(--color-background) 50%,
-    var(--color-background) 85%,
-    var(--color-background-soft) 110%
-  );
+  background: var(--color-background);
+  padding: 0 2rem 0;
 }
 
 .about {
@@ -155,7 +149,6 @@ ul {
   flex-direction: row;
   padding: 1rem;
   border-radius: 1rem;
-  width: 75%;
 }
 
 .containerLeft,
