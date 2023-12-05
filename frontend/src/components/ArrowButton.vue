@@ -1,16 +1,34 @@
 <script setup lang="ts">
 const props = defineProps({
-  destination: String
+  destination: String,
+  direction: String
 })
 
-const buttonClick = (e: any) => {
+const buttonClick = () => {
+  console.log(props.destination)
   if (props.destination) {
     const element = document.getElementById(props.destination)
-    element?.scrollIntoView({ behavior: 'smooth' })
+    // element?.scrollIntoView({ behavior: 'smooth' })
+    window.scrollTo({
+      top: element?.offsetTop - 75,
+      behavior: 'smooth'
+    })
   }
 }
 </script>
 
 <template>
-  <v-icon name="bi-arrow-down-circle" scale="2" />
+  <div class="arrowButton">
+    <v-icon
+      :name="props.direction === 'down' ? 'bi-arrow-down-circle' : 'bi-arrow-up-circle'"
+      scale="2"
+      :onclick="buttonClick"
+    />
+  </div>
 </template>
+
+<style scoped>
+.arrowButton {
+  cursor: pointer;
+}
+</style>

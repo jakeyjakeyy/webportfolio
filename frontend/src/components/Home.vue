@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="home">
+  <div id="homeContainer">
     <div class="welcome">
       <div class="name">
         <h1 class="green">Jake</h1>
@@ -35,8 +35,8 @@ onMounted(() => {
         <h3>Development</h3>
       </div>
     </div>
-    <div class="button">
-      <ArrowButton />
+    <div id="arrowButtonContainer1">
+      <ArrowButton destination="aboutContainer" direction="down" />
     </div>
   </div>
 </template>
@@ -52,7 +52,7 @@ h3 {
   font-size: 1.2rem;
 }
 
-.home {
+#homeContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,7 +60,6 @@ h3 {
   text-align: center;
   height: 100vh;
   min-height: fit-content;
-  margin-bottom: 50px;
 }
 .description {
   display: flex;
@@ -75,7 +74,7 @@ h3 {
   text-align: center;
   width: 30%;
 }
-.button {
+#arrowButtonContainer1 {
   position: absolute;
   cursor: pointer;
   margin-top: 90vh;

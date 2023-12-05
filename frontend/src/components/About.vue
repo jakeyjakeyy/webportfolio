@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="aboutContainer">
+  <div id="aboutContainer">
     <h2>About Jake</h2>
     <div class="listContainer">
       <div class="containerLeft">
@@ -128,12 +128,13 @@ h3 {
 ul {
   padding-left: 1rem;
 }
-.aboutContainer {
+#aboutContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   height: 100vh;
+  min-height: fit-content;
 }
 
 .about {
@@ -148,7 +149,7 @@ ul {
   flex-direction: row;
   padding: 1rem;
   border-radius: 1rem;
-  width: 75%;
+  width: 90%;
 }
 
 .containerLeft,
