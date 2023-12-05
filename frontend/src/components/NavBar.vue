@@ -29,13 +29,10 @@ onscroll = () => {
     const aboutRect = aboutElement.getBoundingClientRect()
     const projectRect = projectElement.getBoundingClientRect()
     if (homeRect.top === 0 || homeRect.bottom >= window.innerHeight / 2) {
-      console.log('home')
       contentSelection = 'home'
     } else if (aboutRect.top === 0 || aboutRect.bottom >= window.innerHeight / 2) {
-      console.log('about')
       contentSelection = 'about'
     } else if (projectRect.top === 0 || projectRect.bottom >= window.innerHeight / 2) {
-      console.log('projects')
       contentSelection = 'projects'
     }
   }

@@ -135,7 +135,7 @@ ul {
   align-items: center;
   height: 100vh;
   background: var(--color-background);
-  padding: 0 2rem 0;
+  padding: 0 3rem 0;
 }
 
 .about {
