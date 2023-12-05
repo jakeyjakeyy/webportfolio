@@ -1,27 +1,50 @@
 <script setup lang="ts">
 let contentSelection: String = 'home'
+let homeElement: HTMLElement | null = null
+let aboutElement: HTMLElement | null = null
+let projectElement: HTMLElement | null = null
 const up = () => {
   if (contentSelection === 'about') {
-    const element = document.getElementById('homeContainer')
-    element?.scrollIntoView({ behavior: 'smooth' })
+    homeElement?.scrollIntoView({ behavior: 'smooth' })
     contentSelection = 'home'
   } else if (contentSelection === 'projects') {
-    const element = document.getElementById('aboutContainer')
-    element?.scrollIntoView({ behavior: 'smooth' })
+    aboutElement?.scrollIntoView({ behavior: 'smooth' })
     contentSelection = 'about'
   }
 }
 const down = () => {
-  console.log(contentSelection)
   if (contentSelection === 'home') {
-    const element = document.getElementById('aboutContainer')
-    element?.scrollIntoView({ behavior: 'smooth' })
+    aboutElement?.scrollIntoView({ behavior: 'smooth' })
     contentSelection = 'about'
   } else if (contentSelection === 'about') {
-    const element = document.getElementById('projectContainer')
-    element?.scrollIntoView({ behavior: 'smooth' })
+    projectElement?.scrollIntoView({ behavior: 'smooth' })
     contentSelection = 'projects'
   }
+}
+
+onscroll = () => {
+  if (homeElement && aboutElement && projectElement) {
+    const bottom = window.innerHeight
+    const homeRect = homeElement.getBoundingClientRect()
+    const aboutRect = aboutElement.getBoundingClientRect()
+    const projectRect = projectElement.getBoundingClientRect()
+    if (homeRect.top === 0 || homeRect.bottom >= window.innerHeight / 2) {
+      console.log('home')
+      contentSelection = 'home'
+    } else if (aboutRect.top === 0 || aboutRect.bottom >= window.innerHeight / 2) {
+      console.log('about')
+      contentSelection = 'about'
+    } else if (projectRect.top === 0 || projectRect.bottom >= window.innerHeight / 2) {
+      console.log('projects')
+      contentSelection = 'projects'
+    }
+  }
+}
+
+onload = () => {
+  homeElement = document.getElementById('homeContainer')
+  aboutElement = document.getElementById('aboutContainer')
+  projectElement = document.getElementById('projectContainer')
 }
 </script>
 
