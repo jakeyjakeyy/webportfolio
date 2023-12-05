@@ -46,7 +46,7 @@ defineProps({
 
 .project:active {
   border: 1px solid var(--color-accent);
-  box-shadow: 0 4px 4px 0px var(--color-background) inset;
+  box-shadow: 4px 5px 4px 0 var(--color-background) inset;
   transform: scale(0.99);
 }
 

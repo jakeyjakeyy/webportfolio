@@ -35,9 +35,6 @@ onMounted(() => {
         <h3>Development</h3>
       </div>
     </div>
-    <div id="arrowButtonContainer1">
-      <ArrowButton destination="aboutContainer" direction="down" />
-    </div>
   </div>
 </template>
 
@@ -60,6 +57,14 @@ h3 {
   text-align: center;
   height: 100vh;
   min-height: fit-content;
+  background: linear-gradient(
+    180deg,
+    var(--color-background-soft) -10%,
+    var(--color-background) 15%,
+    var(--color-background) 50%,
+    var(--color-background) 85%,
+    var(--color-background-soft) 110%
+  );
 }
 .description {
   display: flex;
@@ -73,11 +78,6 @@ h3 {
   font-weight: bold;
   text-align: center;
   width: 30%;
-}
-#arrowButtonContainer1 {
-  position: absolute;
-  cursor: pointer;
-  margin-top: 90vh;
 }
 
 @media (min-width: 1024px) {

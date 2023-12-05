@@ -6,7 +6,7 @@ import dfchronicles from '../../public/dfchronicles.png'
 </script>
 
 <template>
-  <div class="projectContainer">
+  <div id="projectContainer">
     <h3>Projects</h3>
     <div class="githubInfoContainer">
       <Suspense>
@@ -26,11 +26,19 @@ import dfchronicles from '../../public/dfchronicles.png'
 </template>
 
 <style scoped>
-.projectContainer {
+#projectContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--color-background-soft) -10%,
+    var(--color-background) 15%,
+    var(--color-background) 50%,
+    var(--color-background) 85%,
+    var(--color-background-soft) 110%
+  );
 }
 
 .githubInfoContainer {

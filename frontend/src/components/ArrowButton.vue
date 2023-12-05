@@ -8,11 +8,7 @@ const buttonClick = () => {
   console.log(props.destination)
   if (props.destination) {
     const element = document.getElementById(props.destination)
-    // element?.scrollIntoView({ behavior: 'smooth' })
-    window.scrollTo({
-      top: element?.offsetTop - 75,
-      behavior: 'smooth'
-    })
+    element?.scrollIntoView({ behavior: 'smooth' })
   }
 }
 </script>

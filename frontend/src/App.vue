@@ -7,9 +7,6 @@ import ContentView from './views/ContentView.vue'
 <template>
   <div class="app">
     <ContentView />
-    <div class="footer">
-      <Footer />
-    </div>
 
     <RouterView />
   </div>

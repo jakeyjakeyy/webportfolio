@@ -1,15 +1,22 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
+import NavBar from '@/components/NavBar.vue'
 import Home from '@/components/Home.vue'
 import About from '@/components/About.vue'
 import Projects from '@/components/Projects.vue'
+
+const contentSelection = ref('home')
 </script>
 
 <template>
   <div class="content">
-    <Home />
-    <About />
-    <Projects />
+    <NavBar
+      :contentSelection="contentSelection"
+      @update:contentSelection="contentSelection = $event"
+    />
+    <Home v-show="contentSelection == 'home'" />
+    <About v-show="contentSelection == 'about'" />
+    <Projects v-show="contentSelection == 'projects'" />
   </div>
 </template>
 

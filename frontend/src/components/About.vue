@@ -131,17 +131,23 @@ ul {
 #aboutContainer {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  min-height: fit-content;
+  background: linear-gradient(
+    180deg,
+    var(--color-background-soft) -10%,
+    var(--color-background) 15%,
+    var(--color-background) 50%,
+    var(--color-background) 85%,
+    var(--color-background-soft) 110%
+  );
 }
 
 .about {
-  border: 1px solid var(--color-background-soft);
   border-radius: 1rem;
   padding: 1rem;
-  background-color: var(--color-background-soft);
+  background-color: var(--color-background);
 }
 
 .listContainer {
@@ -149,7 +155,7 @@ ul {
   flex-direction: row;
   padding: 1rem;
   border-radius: 1rem;
-  width: 90%;
+  width: 75%;
 }
 
 .containerLeft,
@@ -171,7 +177,7 @@ ul {
 }
 
 .list {
-  background-color: var(--color-background);
+  background-color: var(--color-background-soft);
   border-radius: 1rem;
   padding: 1rem;
   height: 100%;
@@ -179,6 +185,6 @@ ul {
 }
 
 .listHead {
-  color: #211e40;
+  color: var(--color-accent);
 }
 </style>
