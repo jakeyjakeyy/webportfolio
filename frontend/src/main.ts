@@ -11,7 +11,6 @@ import { FaGithub, BiArrowDownCircle, BiArrowUpCircle } from 'oh-vue-icons/icons
 
 addIcons(FaGithub, BiArrowDownCircle, BiArrowUpCircle)
 
-
 const app = createApp(App)
 
 app.use(createPinia())

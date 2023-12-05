@@ -1,27 +1,26 @@
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue';
-const list = ["Web", "Software", "Backend", "Frontend"];
-const index = ref(0);
-const interval = ref(0);
+import { ref, watch, onMounted } from 'vue'
+import ArrowButton from './ArrowButton.vue'
+const list = ['Web', 'Software', 'Backend', 'Frontend']
+const index = ref(0)
+const interval = ref(0)
 
 const change = () => {
-  const last = index.value;
-  index.value = (index.value + 1) % list.length;
+  const last = index.value
+  index.value = (index.value + 1) % list.length
   if (last === index.value) {
-    change();
+    change()
   }
-};
+}
 
 const start = () => {
-  interval.value = setInterval(change, 3000);
-};
+  interval.value = setInterval(change, 3000)
+}
 
 onMounted(() => {
-  index.value = Math.floor(Math.random() * list.length);
-  start();
-});
-
-
+  index.value = Math.floor(Math.random() * list.length)
+  start()
+})
 </script>
 
 <template>
@@ -37,7 +36,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="button">
-      <v-icon name="bi-arrow-down-circle" scale="2" />
+      <ArrowButton />
     </div>
   </div>
 </template>

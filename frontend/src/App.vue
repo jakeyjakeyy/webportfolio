@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import Footer from './components/Footer.vue';
-import ContentView from './views/ContentView.vue';
+import Footer from './components/Footer.vue'
+import ContentView from './views/ContentView.vue'
 </script>
 
 <template>
@@ -16,7 +16,7 @@ import ContentView from './views/ContentView.vue';
 </template>
 
 <style scoped>
-.app{
+.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;

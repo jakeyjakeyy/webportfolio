@@ -1,85 +1,83 @@
 <script setup lang="ts">
-    defineProps({
-        image: String,
-        title: String,
-        description: String,
-        link: String,
-    })
+defineProps({
+  image: String,
+  title: String,
+  description: String,
+  link: String
+})
 </script>
 
 <template>
-    <div class="project">
-        <div class="content">
-            <!-- <div class="image">
+  <div class="project">
+    <div class="content">
+      <!-- <div class="image">
                 <img :src="image" alt="project image">
             </div> -->
-            <div class="title">
-                <h3>{{ title }}</h3>
-            </div>
-            <div class="description">
-                <p>{{ description }}</p>
-            </div>
-            <div class="link">
-                <a :href="link">Link</a>
-            </div>
-        </div>
+      <div class="title">
+        <h3>{{ title }}</h3>
+      </div>
+      <div class="description">
+        <p>{{ description }}</p>
+      </div>
+      <div class="link">
+        <a :href="link">Link</a>
+      </div>
     </div>
+  </div>
 </template>
 
 <style scoped>
-
 .project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-    height: fit-content;
-    border: 1px solid var(--color-background-soft);
-    background-color: var(--color-background-soft);
-    border-radius: 80px;
-    height: 550px;
-    transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: fit-content;
+  border: 1px solid var(--color-background-soft);
+  background-color: var(--color-background-soft);
+  border-radius: 80px;
+  height: 550px;
+  transition: all 0.2s ease-in-out;
 }
 
 .project:hover {
-    border: 1px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .project:active {
-    border: 1px solid var(--color-accent);
-    box-shadow: 0 4px 4px 0px var(--color-background) inset;
-    transform: scale(0.99);
+  border: 1px solid var(--color-accent);
+  box-shadow: 0 4px 4px 0px var(--color-background) inset;
+  transform: scale(0.99);
 }
 
 img {
-    max-height: 100%;
-    max-width: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    padding: 3rem 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 3rem 3rem 1rem;
 }
 
 .title {
-    font-size: 2rem;
-    text-align: center;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .link {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-
 </style>

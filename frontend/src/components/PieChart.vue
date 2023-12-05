@@ -5,12 +5,12 @@ import { Pie } from 'vue-chartjs'
 ChartJS.register(ArcElement, Tooltip, Legend, Colors)
 
 defineProps({
-    data: Object
+  data: Object
 })
 </script>
 
 <template>
-    <div class="pieChart">
-        <Pie id="githubInfoPie" :data="data" />
-    </div>
+  <div class="pieChart">
+    <Pie id="githubInfoPie" :data="data" />
+  </div>
 </template>
