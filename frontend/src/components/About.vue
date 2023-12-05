@@ -3,17 +3,18 @@
 
 <template>
  <div class="aboutContainer">
+    <h2>About Jake</h2>
     <div class="listContainer">
         <div class="containerLeft">
             <div class="listDiv" id="top">
                 <div class="list">
                     <h3 class="listHead">About</h3>
                     <div class="about">
-                        <p>I am a passionate and motivated software developer proficient in technologies such as Python, JavaScript, React, Vue, and Django.</p>
-                        <p>The opportunity to constantly learn and improve my skills as a developer drives me every day. I am proud to hold certificates from HarvardX, in both <a href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"> Web Programming with Python and JavaScript</a>, and <a href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter">Introduction to Computer Science</a>.</p>
+                        <p>I am a passionate and motivated software developer proficient in technologies such as Python, JavaScript, React, Vue, Django, and more. Creating infastructure and backend solutions is very satisfying, and I am always looking for new ways to improve my skills and learn new technologies.</p>
+                        <p>The opportunity to constantly learn and improve my skills as a developer drives me every day, and I am proud to hold certificates from Harvard's CS50 in both <a href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"> Web Programming with Python and JavaScript</a>, and <a href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter">Introduction to Computer Science</a>.</p>
                         <br>
-                        <p>When programming, I enjoy creating APIs and backend functionalities, identifying and overcoming challenges, and making meaningful contributions to projects that improve lives or bring joy.</p>
-                        <p>Beyond coding, I have a strong passion for music, watching sports (go Warriors! 🏀), and keeping up with technology and science.</p>
+                        <p>When programming, I enjoy identifying and overcoming challenges, and making meaningful contributions to projects that improve lives or bring joy.</p>
+                        <p>Beyond the computer, I have a passion for music, watching sports (go Warriors! 🏀), and keeping up with technology and science.</p>
                     </div>
                 </div>
             </div>
@@ -21,7 +22,7 @@
                 <div class="list">
                     <h3 class="listHead">Certifications and Education</h3>
                     <ul>
-                        <li>HarvardX </li>
+                        <li>HarvardX</li>
                         <ul>
                             <li>Dates Attended</li>
                             <ul>
@@ -77,8 +78,8 @@
                     <li>Database Management Systems</li>
                     <ul>
                         <li>SQL</li>
-                        <li >SQLite</li>
                         <li>Postgres</li>
+                        <li>Other relational databases</li>
                     </ul>
                     <li>Operating Systems</li>
                     <ul>
@@ -87,9 +88,8 @@
                     </ul>
                     <li>Proficiencies</li>
                     <ul>
-                        <li>API and Backend solutions</li>
                         <li>Problem Solving</li>
-                        <li>Teamwork</li>
+                        <li>Working with a team</li>
                         <li>Communication</li>
                     </ul>
                 </ul>

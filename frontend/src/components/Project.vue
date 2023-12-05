@@ -4,7 +4,6 @@
         title: String,
         description: String,
         link: String,
-        technologies: Array    
     })
 </script>
 
@@ -33,12 +32,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 25%;
     height: fit-content;
     border: 1px solid var(--color-background-soft);
     background-color: var(--color-background-soft);
     border-radius: 80px;
     height: 550px;
+    transition: all 0.2s ease-in-out;
+}
+
+.project:hover {
+    border: 1px solid var(--color-accent);
+}
+
+.project:active {
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 4px 4px 0px var(--color-background) inset;
+    transform: scale(0.99);
 }
 
 img {

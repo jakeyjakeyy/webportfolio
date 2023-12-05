@@ -16,12 +16,6 @@ import Projects from '@/components/Projects.vue';
 </template>
 
 <style scoped>
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem 1rem;
-}
 .selections {
     display: flex;
     justify-content: center;
