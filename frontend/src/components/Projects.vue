@@ -18,6 +18,7 @@ import dfchronicles from '../../public/dfchronicles.png';
             <Project 
             title="Dwarf Fortress Chronicles"
             description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
+            link="https://www.github.com/jakeyjakeyy/dfchronicles"
             />
             <Project />
             <Project />
