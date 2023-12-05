@@ -10,21 +10,15 @@
 
 <template>
     <div class="project">
-        <div class="image">
-            <img :src="image" />
-        </div>
         <div class="content">
+            <!-- <div class="image">
+                <img :src="image" alt="project image">
+            </div> -->
             <div class="title">
-                <h2>{{ title }}</h2>
+                <h3>{{ title }}</h3>
             </div>
             <div class="description">
                 <p>{{ description }}</p>
-            </div>
-            <div class="technologies">
-                <h3>Technologies</h3>
-                <ul>
-                    <li v-for="technology in technologies">{{ technology }}</li>
-                </ul>
             </div>
             <div class="link">
                 <a :href="link">Link</a>
@@ -37,9 +31,14 @@
 
 .project {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: fit-content;
+    border: 1px solid var(--color-background-soft);
+    background-color: var(--color-background-soft);
+    border-radius: 80px;
+    height: 550px;
 }
 
 img {
@@ -51,22 +50,26 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    overflow: hidden;
-    border-radius: 100px;
-    width: 45%;
+    width: 100%;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    width: 55%;
-    padding: 1rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 3rem 3rem 1rem;
 }
 
 .title {
     font-size: 2rem;
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
 }
 
 </style>

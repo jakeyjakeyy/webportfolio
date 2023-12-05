@@ -35,13 +35,12 @@ const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifferen
 
 <template>
     <div class="githubInfo">
+        <div class="languages">
+            <PieChart :data="chartData" />
+        </div>
         <div class="lastActive">
             <h4>Last Active</h4>
             <p>{{ timeDifferenceFormatted }}</p>
-        </div>
-        <div class="languages">
-            <h4>Languages</h4>
-            <PieChart :data="chartData" />
         </div>
     </div>
 </template>
@@ -49,7 +48,16 @@ const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifferen
 <style scoped>
 
 .githubInfo {
-    border: 1px solid var(--color-background-soft);
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+
+.lastActive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
 }
 

@@ -3,14 +3,13 @@
 
 <template>
  <div class="aboutContainer">
-    <h3>About</h3>
     <div class="listContainer">
         <div class="containerLeft">
             <div class="listDiv" id="top">
                 <div class="list">
                     <h3 class="listHead">About</h3>
                     <div class="about">
-                        <p>I am a passionate and motivated software developer with experience in technologies such as Python, JavaScript, React, Vue, and Django.</p>
+                        <p>I am a passionate and motivated software developer proficient in technologies such as Python, JavaScript, React, Vue, and Django.</p>
                         <p>The opportunity to constantly learn and improve my skills as a developer drives me every day. I am proud to hold certificates from HarvardX, in both <a href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"> Web Programming with Python and JavaScript</a>, and <a href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter">Introduction to Computer Science</a>.</p>
                         <br>
                         <p>When programming, I enjoy creating APIs and backend functionalities, identifying and overcoming challenges, and making meaningful contributions to projects that improve lives or bring joy.</p>
@@ -86,6 +85,13 @@
                         <li>Linux</li>
                         <li>Windows</li>
                     </ul>
+                    <li>Proficiencies</li>
+                    <ul>
+                        <li>API and Backend solutions</li>
+                        <li>Problem Solving</li>
+                        <li>Teamwork</li>
+                        <li>Communication</li>
+                    </ul>
                 </ul>
             </div>
         </div>
@@ -98,12 +104,15 @@ h3 {
     margin-bottom: 1rem;
     align-self: flex-start;
 }
+ul {
+    padding-left: 1rem;
+}
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    height: 95vh;
+    height: 100vh;
 }
 
 .about {
@@ -117,10 +126,8 @@ h3 {
     display: flex;
     flex-direction: row;
     padding: 1rem;
-    background-color: var(--color-background-soft);
-    border: 1px solid var(--color-background-soft);
     border-radius: 1rem;
-    width: 75%
+    width: 75%;
 }
 
 .containerLeft, .containerRight {
@@ -149,6 +156,6 @@ h3 {
 }
 
 .listHead {
-    color: var(--color-accent);
+    color: #211e40;
 }
 </style>

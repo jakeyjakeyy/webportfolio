@@ -8,20 +8,19 @@ import dfchronicles from '../../public/dfchronicles.png';
 
 <template>
     <div class="projectContainer">
-        <h3>Git Data</h3>
+        <h3>Projects</h3>
         <div class="githubInfoContainer">
             <Suspense>
                 <githubInfo />
             </Suspense>
         </div>
         <div class="projects">
-            <h3>Projects</h3>
             <Project 
-            :image="dfchronicles"
             title="Dwarf Fortress Chronicles"
             description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
-            :technologies="['React', 'Django', 'PostgreSQL', 'Docker']"
             />
+            <Project />
+            <Project />
         </div>
     </div>
 </template>
@@ -32,7 +31,7 @@ import dfchronicles from '../../public/dfchronicles.png';
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .githubInfoContainer {
@@ -43,12 +42,11 @@ import dfchronicles from '../../public/dfchronicles.png';
 
 .projects {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: fit-content;
 }
 
-.project {
-    height: 30rem;
-    border: 1px solid var(--color-background-soft);
-}
+
 
 </style>
