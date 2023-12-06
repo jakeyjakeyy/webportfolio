@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 import ArrowButton from './ArrowButton.vue'
-const list = ['Web', 'Software', 'Backend', 'Frontend']
+const list = ['Web', 'Software', 'Backend', 'Frontend', 'Fullstack']
 const index = ref(0)
 const interval = ref(0)
 

@@ -135,7 +135,7 @@ ul {
   align-items: center;
   height: 100vh;
   background: var(--color-background);
-  padding: 0 2rem 0;
+  padding: 0 3rem 0;
 }
 
 .about {
@@ -151,12 +151,13 @@ ul {
   border-radius: 1rem;
 }
 
-.containerLeft,
 .containerRight {
   display: flex;
   flex-direction: column;
 }
 .containerLeft {
+  display: flex;
+  flex-direction: column;
   width: 85%;
   margin-right: 1rem;
 }

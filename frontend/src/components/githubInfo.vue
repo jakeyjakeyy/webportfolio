@@ -12,7 +12,6 @@ const chartData: Object = {
     }
   ]
 }
-console.log(chartData)
 
 const currentTime = new Date()
 const lastActive = new Date(githubInfoData.value.lastActive)
