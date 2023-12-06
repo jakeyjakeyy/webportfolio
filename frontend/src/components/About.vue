@@ -40,7 +40,7 @@
             </div>
           </div>
         </div>
-        <div class="listDiv">
+        <div class="listDiv" id="bottom">
           <div class="list">
             <h3 class="listHead">Certifications and Education</h3>
             <ul>
@@ -75,45 +75,47 @@
       <div class="containerRight">
         <div class="list">
           <h3 class="listHead">Skills</h3>
-          <ul>
-            <li>Programming Languages</li>
+          <div id="rightList">
             <ul>
-              <li>Python</li>
-              <li>JavaScript</li>
-              <li>C</li>
+              <li>Programming Languages</li>
+              <ul>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>C</li>
+              </ul>
+              <li>Frameworks and Libraries</li>
+              <ul>
+                <li>React</li>
+                <li>Vue</li>
+                <li>Django</li>
+                <li>Bootstrap</li>
+              </ul>
+              <li>Tools</li>
+              <ul>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Docker</li>
+                <li>VS Code</li>
+              </ul>
+              <li>Database Management Systems</li>
+              <ul>
+                <li>SQL</li>
+                <li>Postgres</li>
+                <li>Other relational databases</li>
+              </ul>
+              <li>Operating Systems</li>
+              <ul>
+                <li>Linux</li>
+                <li>Windows</li>
+              </ul>
+              <li>Proficiencies</li>
+              <ul>
+                <li>Problem Solving</li>
+                <li>Working with a team</li>
+                <li>Communication</li>
+              </ul>
             </ul>
-            <li>Frameworks and Libraries</li>
-            <ul>
-              <li>React</li>
-              <li>Vue</li>
-              <li>Django</li>
-              <li>Bootstrap</li>
-            </ul>
-            <li>Tools</li>
-            <ul>
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>Docker</li>
-              <li>VS Code</li>
-            </ul>
-            <li>Database Management Systems</li>
-            <ul>
-              <li>SQL</li>
-              <li>Postgres</li>
-              <li>Other relational databases</li>
-            </ul>
-            <li>Operating Systems</li>
-            <ul>
-              <li>Linux</li>
-              <li>Windows</li>
-            </ul>
-            <li>Proficiencies</li>
-            <ul>
-              <li>Problem Solving</li>
-              <li>Working with a team</li>
-              <li>Communication</li>
-            </ul>
-          </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -121,7 +123,7 @@
 </template>
 
 <style scoped>
-h3 {
+.listHead {
   margin-bottom: 1rem;
   align-self: flex-start;
 }
@@ -133,7 +135,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: var(--color-background);
   padding: 0 3rem 0;
 }
@@ -149,6 +151,7 @@ ul {
   flex-direction: row;
   padding: 1rem;
   border-radius: 1rem;
+  justify-content: center;
 }
 
 .containerRight {
@@ -158,7 +161,7 @@ ul {
 .containerLeft {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 75%;
   margin-right: 1rem;
 }
 
@@ -168,6 +171,15 @@ ul {
 
 #top {
   margin-bottom: 1rem;
+}
+#bottom {
+  height: 100%;
+}
+#rightList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 85%;
 }
 
 .list {

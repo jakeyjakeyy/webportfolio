@@ -20,6 +20,7 @@ import ContentView from './views/ContentView.vue'
   height: 100%;
   width: 100vw;
   margin: 0;
+  overflow: hidden;
 }
 
 header {

@@ -73,29 +73,44 @@ onload = () => {
   arrowUpElement = document.getElementById('arrowUp')
   arrowDownElement = document.getElementById('arrowDown')
 }
-
-watch(contentSelection, () => {
-  if (contentSelection.value === 'home') {
-  } else if (contentSelection.value === 'about') {
-    aboutElement?.scrollIntoView({ behavior: 'smooth' })
-  } else if (contentSelection.value === 'projects') {
-    projectElement?.scrollIntoView({ behavior: 'smooth' })
-  }
-})
 </script>
 
 <template>
   <div class="navContainer">
-    <div v-if="contentSelection !== 'home'" id="arrowUp">
+    <div v-if="contentSelection !== 'home'" id="arrowUp" class="animateUp">
       <v-icon name="bi-arrow-up-circle" scale="2" @click="up" />
     </div>
-    <div v-if="contentSelection !== 'projects'" id="arrowDown">
+    <div v-if="contentSelection !== 'projects'" class="animateDown" id="arrowDown">
       <v-icon name="bi-arrow-down-circle" scale="2" @click="down" />
     </div>
   </div>
 </template>
 
 <style scoped>
+@keyframes arrowUpAnimation {
+  0% {
+    transform: translateY(30px) scale(0);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+@keyframes arrowDownAnimation {
+  0% {
+    transform: translateY(-30px) scale(0);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.animateUp {
+  animation: arrowUpAnimation 0.5s ease-in-out;
+}
+.animateDown {
+  animation: arrowDownAnimation 0.5s ease-in-out;
+}
+
 .navContainer {
   display: flex;
   flex-direction: column;
@@ -107,5 +122,13 @@ watch(contentSelection, () => {
   height: 100vh;
   padding: 1rem;
   z-index: 100;
+}
+.hidden {
+  display: none;
+}
+
+#arrowUp,
+#arrowDown {
+  cursor: pointer;
 }
 </style>

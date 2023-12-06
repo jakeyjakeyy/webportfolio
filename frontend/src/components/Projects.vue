@@ -29,6 +29,7 @@ import dfchronicles from '../../public/dfchronicles.png'
 #projectContainer {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   width: 100%;
   min-height: 100vh;
   background: var(--color-background);
