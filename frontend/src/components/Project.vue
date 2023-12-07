@@ -3,12 +3,13 @@ defineProps({
   image: String,
   title: String,
   description: String,
-  link: String
+  link: String,
+  id: String
 })
 </script>
 
 <template>
-  <div class="project">
+  <div class="project" :id="id">
     <div class="content">
       <!-- <div class="image">
                 <img :src="image" alt="project image">
@@ -38,13 +39,20 @@ defineProps({
   border-radius: 80px;
   height: 550px;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .project {
+    width: 75%;
+  }
 }
 
 .project:hover {
   border: 1px solid var(--color-accent);
 }
 
-.project:active {
+.active {
   border: 1px solid var(--color-accent);
   box-shadow: 4px 5px 4px 0 var(--color-background) inset;
   transform: scale(0.99);

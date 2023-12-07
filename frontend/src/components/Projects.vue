@@ -1,8 +1,30 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import githubInfo from './githubInfo.vue'
 import Project from './Project.vue'
 import dfchronicles from '../../public/dfchronicles.png'
+let projectElements: NodeListOf<Element>
+
+const projectActive = ref('')
+
+onMounted(() => {
+  projectElements = document.querySelectorAll('.project')
+  projectElements.forEach((element) => {
+    element.addEventListener('click', () => {
+      if (element.classList.contains('active')) {
+        element.classList.remove('active')
+        projectActive.value = ''
+      } else {
+        projectElements.forEach((element) => {
+          element.classList.remove('active')
+        })
+        projectActive.value = element.id
+        console.log(projectActive.value)
+        element.classList.toggle('active')
+      }
+    })
+  })
+})
 </script>
 
 <template>
@@ -10,7 +32,8 @@ import dfchronicles from '../../public/dfchronicles.png'
     <h3>Projects</h3>
     <div class="githubInfoContainer">
       <Suspense>
-        <githubInfo />
+        <githubInfo v-if="projectActive == ''" id="'none'" />
+        <githubInfo v-else :id="projectActive" />
       </Suspense>
     </div>
     <div class="projects">
@@ -18,6 +41,7 @@ import dfchronicles from '../../public/dfchronicles.png'
         title="Dwarf Fortress Chronicles"
         description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
+        id="dfchronicles"
       />
       <Project />
       <Project />
@@ -47,5 +71,12 @@ import dfchronicles from '../../public/dfchronicles.png'
   flex-direction: row;
   justify-content: space-evenly;
   min-height: fit-content;
+}
+
+@media (max-width: 1200px) {
+  .projects {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 </style>
