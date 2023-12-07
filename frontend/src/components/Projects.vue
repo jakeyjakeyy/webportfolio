@@ -19,7 +19,6 @@ onMounted(() => {
           element.classList.remove('active')
         })
         projectActive.value = element.id
-        console.log(projectActive.value)
         element.classList.toggle('active')
       }
     })
