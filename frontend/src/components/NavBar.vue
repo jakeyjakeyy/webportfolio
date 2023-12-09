@@ -103,36 +103,9 @@ onload = () => {
   }
   100% {
     opacity: 1;
-    transform: translateY(-30px);
+    transform: translateY(-25px);
   }
 }
-@keyframes arrowUpDisappear {
-  0% {
-    opacity: 1;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-}
-@keyframes arrowUpCentered {
-  0% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-@keyframes arrowUpFromCenter {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-30px);
-  }
-}
-
 @keyframes arrowDownAppear {
   0% {
     opacity: 0;
@@ -140,16 +113,56 @@ onload = () => {
   }
   100% {
     opacity: 1;
-    transform: translateY(30px);
+    transform: translateY(25px);
+  }
+}
+
+@keyframes arrowUpDisappear {
+  0% {
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes arrowDownDisappear {
+  0% {
+    opacity: 1;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes arrowUpCentered {
+  0% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
 @keyframes arrowDownCentered {
   0% {
-    transform: translateY(30px);
+    transform: translateY(25px);
   }
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes arrowUpFromCenter {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-25px);
   }
 }
 
@@ -158,18 +171,7 @@ onload = () => {
     transform: translateY(0px);
   }
   100% {
-    transform: translateY(30px);
-  }
-}
-
-@keyframes arrowDownDisappear {
-  0% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(25px);
   }
 }
 
@@ -225,8 +227,5 @@ onload = () => {
 #arrowDown {
   cursor: pointer;
   position: absolute;
-}
-
-#arrowDown {
 }
 </style>
