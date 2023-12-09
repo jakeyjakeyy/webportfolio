@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import githubInfo from '../utils/githubInfo'
 import PieChart from './PieChart.vue'
 
 const githubInfoData = ref(await githubInfo('jakeyjakeyy'))
-const chartData: Object = {
+let chartData: Object = {
   labels: Object.keys(githubInfoData.value.languagePercentages),
   datasets: [
     {
@@ -30,6 +30,25 @@ const formatTimeDifference = (ms: number) => {
 }
 
 const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifference))
+
+const activeProject = ref('')
+onMounted(async () => {
+  let projectElements = document.querySelectorAll('.project')
+  projectElements.forEach(async (element) => {
+    if (element.classList.contains('active')) {
+      activeProject.value = element.id
+      githubInfoData.value = await githubInfo(activeProject.value)
+      chartData = {
+        labels: Object.keys(githubInfoData.value.languagePercentages),
+        datasets: [
+          {
+            data: Object.values(githubInfoData.value.languagePercentages)
+          }
+        ]
+      }
+    }
+  })
+})
 </script>
 
 <template>
