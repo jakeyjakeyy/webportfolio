@@ -152,6 +152,7 @@ ul {
   padding: 1rem;
   border-radius: 1rem;
   justify-content: center;
+  width: 75%;
 }
 
 .containerRight {

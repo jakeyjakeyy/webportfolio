@@ -2,7 +2,7 @@
 
 <template>
   <footer>
-    <div class="footer">
+    <div class="footerIcons">
       <div class="icon">
         <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
           <v-icon name="fa-github" scale="1.25" />
