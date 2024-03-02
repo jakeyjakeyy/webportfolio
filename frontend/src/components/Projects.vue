@@ -42,7 +42,13 @@ onMounted(() => {
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
         id="dfchronicles"
       />
-      <Project />
+      <Project
+        title="City Trip Planner"
+        description="A web app that allows users to create an itinerary from a custom generated list of locations to visit based on their interests."
+        link="https://github.com/jakeyjakeyy/cityplanner"
+        id="cityplanner"
+      />
+
       <Project />
     </div>
   </div>

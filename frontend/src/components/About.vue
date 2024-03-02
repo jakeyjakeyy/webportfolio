@@ -80,6 +80,7 @@
               <li>Programming Languages</li>
               <ul>
                 <li>Python</li>
+                <li>Typescript</li>
                 <li>JavaScript</li>
                 <li>C</li>
               </ul>
@@ -88,7 +89,6 @@
                 <li>React</li>
                 <li>Vue</li>
                 <li>Django</li>
-                <li>Bootstrap</li>
               </ul>
               <li>Tools</li>
               <ul>
@@ -101,7 +101,6 @@
               <ul>
                 <li>SQL</li>
                 <li>Postgres</li>
-                <li>Other relational databases</li>
               </ul>
               <li>Operating Systems</li>
               <ul>

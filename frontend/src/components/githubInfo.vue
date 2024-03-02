@@ -2,19 +2,20 @@
 import { ref, computed, onMounted } from 'vue'
 import githubInfo from '../utils/githubInfo'
 import PieChart from './PieChart.vue'
+import { watch } from 'fs'
 
 const githubInfoData = ref(await githubInfo('jakeyjakeyy'))
-let chartData: Object = {
+const chartData = ref({
   labels: Object.keys(githubInfoData.value.languagePercentages),
   datasets: [
     {
       data: Object.values(githubInfoData.value.languagePercentages)
     }
   ]
-}
+})
 
 const currentTime = new Date()
-const lastActive = new Date(githubInfoData.value.lastActive)
+let lastActive: Date | null = new Date(githubInfoData.value.lastActive)
 const timeDifference = currentTime.getTime() - lastActive.getTime()
 
 const formatTimeDifference = (ms: number) => {
@@ -38,13 +39,18 @@ onMounted(async () => {
     if (element.classList.contains('active')) {
       activeProject.value = element.id
       githubInfoData.value = await githubInfo(activeProject.value)
-      chartData = {
+      chartData.value = {
         labels: Object.keys(githubInfoData.value.languagePercentages),
         datasets: [
           {
             data: Object.values(githubInfoData.value.languagePercentages)
           }
         ]
+      }
+      if (githubInfoData.value.lastActive === 'N/A') {
+        lastActive = null
+      } else {
+        lastActive = new Date(githubInfoData.value.lastActive)
       }
     }
   })
@@ -56,7 +62,7 @@ onMounted(async () => {
     <div class="languages">
       <PieChart :data="chartData" :size="200" />
     </div>
-    <div class="lastActive">
+    <div v-if="lastActive" class="lastActive">
       <h4>Last Active</h4>
       <p>{{ timeDifferenceFormatted }}</p>
     </div>

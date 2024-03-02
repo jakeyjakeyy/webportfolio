@@ -14,7 +14,12 @@ interface UserActivityAndLanguages {
 }
 
 async function fetchAndProcessLanguages(url: string): Promise<LanguageData> {
-  const response = await fetch(url)
+  const GITHUB_KEY = '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'
+  const response = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${GITHUB_KEY}`
+    }
+  })
   const languages: LanguageData = await response.json()
   let totalSize = 0
   for (const size of Object.values(languages)) {
