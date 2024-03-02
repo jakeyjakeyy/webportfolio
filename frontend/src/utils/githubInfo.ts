@@ -58,7 +58,6 @@ async function githubInfo(username: string): Promise<UserActivityAndLanguages> {
       `https://api.github.com/repos/jakeyjakeyy/${repo.name}/languages`,
       Object.keys(repos).length
     )
-    console.log(langData)
     for (const [lang, size] of Object.entries(langData)) {
       languages[lang] = (languages[lang] || 0) + size
     }
