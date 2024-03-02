@@ -13,7 +13,7 @@ interface UserActivityAndLanguages {
   languagePercentages: LanguageData
 }
 
-async function fetchAndProcessLanguages(url: string): Promise<LanguageData> {
+async function fetchAndProcessLanguages(url: string, index?: number): Promise<LanguageData> {
   const GITHUB_KEY = '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'
   const response = await fetch(url, {
     headers: {
@@ -28,6 +28,9 @@ async function fetchAndProcessLanguages(url: string): Promise<LanguageData> {
   const languagePercentages: LanguageData = {}
   for (const [lang, size] of Object.entries(languages)) {
     languagePercentages[lang] = parseFloat(((size / totalSize) * 100).toFixed(2))
+    if (index) {
+      languagePercentages[lang] = languagePercentages[lang] / index
+    }
   }
   return languagePercentages
 }
@@ -52,8 +55,10 @@ async function githubInfo(username: string): Promise<UserActivityAndLanguages> {
   const languages: LanguageData = {}
   for (const repo of repos) {
     const langData = await fetchAndProcessLanguages(
-      `https://api.github.com/repos/jakeyjakeyy/${repo.name}/languages`
+      `https://api.github.com/repos/jakeyjakeyy/${repo.name}/languages`,
+      Object.keys(repos).length
     )
+    console.log(langData)
     for (const [lang, size] of Object.entries(langData)) {
       languages[lang] = (languages[lang] || 0) + size
     }
