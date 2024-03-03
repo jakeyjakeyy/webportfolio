@@ -13,8 +13,8 @@ interface UserActivityAndLanguages {
   languagePercentages: LanguageData
 }
 
+const GITHUB_KEY = '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'
 async function fetchAndProcessLanguages(url: string, index?: number): Promise<LanguageData> {
-  const GITHUB_KEY = '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'
   const response = await fetch(url, {
     headers: {
       Authorization: `Bearer ${GITHUB_KEY}`
@@ -45,11 +45,19 @@ async function githubInfo(username: string): Promise<UserActivityAndLanguages> {
       languagePercentages
     }
   }
-  const response = await fetch(`https://api.github.com/users/jakeyjakeyy/events/public`)
+  const response = await fetch(`https://api.github.com/users/jakeyjakeyy/events/public`, {
+    headers: {
+      Authorization: `Bearer ${GITHUB_KEY}`
+    }
+  })
   const events: Array<{ created_at: string }> = await response.json()
   const lastActive = events[0].created_at
 
-  const repoResponse = await fetch(`https://api.github.com/users/jakeyjakeyy/repos`)
+  const repoResponse = await fetch(`https://api.github.com/users/jakeyjakeyy/repos`, {
+    headers: {
+      Authorization: `Bearer ${GITHUB_KEY}`
+    }
+  })
   const repos: Repo[] = await repoResponse.json()
 
   const languages: LanguageData = {}

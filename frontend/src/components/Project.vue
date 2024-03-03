@@ -31,7 +31,7 @@ const curIndex = ref(0)
             </li>
           </ul>
           <ul v-if="technologies && technologies.length > 5">
-            <li v-for="technology in technologies.slice(5, -1)">{{ technology }}</li>
+            <li v-for="technology in technologies.slice(5)">{{ technology }}</li>
           </ul>
         </div>
       </div>
