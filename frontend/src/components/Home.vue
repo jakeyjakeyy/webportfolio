@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 import ArrowButton from './ArrowButton.vue'
-const list = ['Software', 'Web', 'Fullstack']
+const list = ['Web', 'Frontend', 'Backend']
 const index = ref(0)
-const interval = ref(0)
+const interval = ref<NodeJS.Timeout | number>(0)
 
 const change = () => {
   const last = index.value

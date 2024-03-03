@@ -39,12 +39,24 @@ onMounted(() => {
       <Project
         title="Dwarf Fortress Chronicles"
         description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
+        :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI API']"
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
         id="dfchronicles"
       />
       <Project
         title="City Trip Planner"
         description="A web app that allows users to create an itinerary from a custom generated list of locations to visit based on their interests."
+        :technologies="[
+          'React',
+          'Django',
+          'PostgreSQL',
+          'Docker',
+          'Google Maps API',
+          'Google Places API',
+          'OpenAI API',
+          'SeatGeek API',
+          'Ticketmaster API'
+        ]"
         link="https://github.com/jakeyjakeyy/cityplanner"
         id="cityplanner"
       />

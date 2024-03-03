@@ -10,10 +10,10 @@
             <h3 class="listHead">About</h3>
             <div class="about">
               <p>
-                I am a passionate and motivated software developer proficient in technologies such
-                as Python, JavaScript, React, Vue, Django, and more. Creating infastructure and
-                backend solutions is very satisfying, and I am always looking for new ways to
-                improve my skills and learn new technologies.
+                I am a passionate and motivated software developer proficient in languages and
+                technologies such as Python, TypeScript, Javascript, React, Vue, Django, and more.
+                Creating infastructure and backend solutions is very satisfying to me, and I am
+                always looking for new ways to improve my skills and learn the latest technologies.
               </p>
               <p>
                 The opportunity to constantly learn and improve my skills as a developer drives me
@@ -31,11 +31,11 @@
               <br />
               <p>
                 When programming, I enjoy identifying and overcoming challenges, and making
-                meaningful contributions to projects that improve lives or bring joy.
+                meaningful contributions to projects that improve lives or simply bring joy.
               </p>
               <p>
-                Beyond the computer, I have a passion for music, watching sports (go Warriors! 🏀),
-                and keeping up with technology and science.
+                Beyond the computer, I have a passion for music, watching sports, and keeping up
+                with updates in technology and science.
               </p>
             </div>
           </div>
@@ -111,6 +111,7 @@
               <ul>
                 <li>Problem Solving</li>
                 <li>Working with a team</li>
+                <li>Team Management</li>
                 <li>Communication</li>
               </ul>
             </ul>
