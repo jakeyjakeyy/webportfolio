@@ -68,6 +68,7 @@ watch(
           }
         ]
       }
+      lastActive = new Date(githubInfoData.value.lastActive)
     }
   }
 )
