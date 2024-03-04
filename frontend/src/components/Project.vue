@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, ref, defineComponent } from 'vue'
+import { ref, defineComponent } from 'vue'
 defineProps({
   image: String,
   title: String,

@@ -13,7 +13,7 @@ interface UserActivityAndLanguages {
   languagePercentages: LanguageData
 }
 
-const GITHUB_KEY = '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'
+const GITHUB_KEY = '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' // token with no permissions, hiding the key is the only reason I need to create a backend, so I'm keeping it here for now
 async function fetchAndProcessLanguages(url: string, index?: number): Promise<LanguageData> {
   const response = await fetch(url, {
     headers: {

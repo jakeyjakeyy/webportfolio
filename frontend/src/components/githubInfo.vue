@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, defineProps, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import githubInfo from '../utils/githubInfo'
 import PieChart from './PieChart.vue'
 
