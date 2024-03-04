@@ -1,30 +1,29 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, watch } from 'vue'
 import githubInfo from './githubInfo.vue'
 import Project from './Project.vue'
 import dfchronicles from '../../public/dfchronicles.png'
 let projectElements: NodeListOf<Element>
 
 const projectActive = ref('')
-
-onMounted(() => {
+watch(projectActive, (newValue) => {
   projectElements = document.querySelectorAll('.project')
   projectElements.forEach((element) => {
-    element.addEventListener('click', () => {
-      if (element.classList.contains('active')) {
-        element.classList.remove('active')
-        projectActive.value = ''
-      } else {
-        projectElements.forEach((element) => {
-          element.classList.remove('active')
-        })
-        projectActive.value = element.id
-        console.log(projectActive.value)
-        element.classList.toggle('active')
-      }
-    })
+    if (element.classList.contains('active')) {
+      element.classList.remove('active')
+    }
   })
+  if (newValue === '') return
+  let activeElement = document.getElementById(newValue)
+  activeElement?.classList.add('active')
 })
+const toggleActive = (id: string) => {
+  if (projectActive.value === id) {
+    projectActive.value = ''
+  } else {
+    projectActive.value = id
+  }
+}
 </script>
 
 <template>
@@ -32,8 +31,7 @@ onMounted(() => {
     <h3>Projects</h3>
     <div class="githubInfoContainer">
       <Suspense>
-        <githubInfo v-if="projectActive == ''" id="'none'" />
-        <githubInfo v-else :id="projectActive" />
+        <githubInfo :id="projectActive" />
       </Suspense>
     </div>
     <div class="projects">
@@ -42,6 +40,7 @@ onMounted(() => {
         description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
         :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI API']"
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
+        @click="toggleActive('dfchronicles')"
         id="dfchronicles"
       />
       <Project
@@ -59,6 +58,7 @@ onMounted(() => {
           'Ticketmaster API'
         ]"
         link="https://github.com/jakeyjakeyy/cityplanner"
+        @click="toggleActive('cityplanner')"
         id="cityplanner"
       />
 

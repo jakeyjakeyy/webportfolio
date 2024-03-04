@@ -1,8 +1,14 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, defineProps, watch } from 'vue'
 import githubInfo from '../utils/githubInfo'
 import PieChart from './PieChart.vue'
-import { watch } from 'fs'
+
+const props = defineProps({
+  id: {
+    type: String,
+    required: true
+  }
+})
 
 const githubInfoData = ref(await githubInfo('jakeyjakeyy'))
 const chartData = ref({
@@ -32,13 +38,12 @@ const formatTimeDifference = (ms: number) => {
 
 const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifference))
 
-const activeProject = ref('')
-onMounted(async () => {
-  let projectElements = document.querySelectorAll('.project')
-  projectElements.forEach(async (element) => {
-    if (element.classList.contains('active')) {
-      activeProject.value = element.id
-      githubInfoData.value = await githubInfo(activeProject.value)
+watch(
+  () => props.id,
+  async () => {
+    if (props.id) {
+      console.log(props.id)
+      githubInfoData.value = await githubInfo(props.id)
       chartData.value = {
         labels: Object.keys(githubInfoData.value.languagePercentages),
         datasets: [
@@ -52,9 +57,20 @@ onMounted(async () => {
       } else {
         lastActive = new Date(githubInfoData.value.lastActive)
       }
+    } else {
+      console.log('no id')
+      githubInfoData.value = await githubInfo('jakeyjakeyy')
+      chartData.value = {
+        labels: Object.keys(githubInfoData.value.languagePercentages),
+        datasets: [
+          {
+            data: Object.values(githubInfoData.value.languagePercentages)
+          }
+        ]
+      }
     }
-  })
-})
+  }
+)
 </script>
 
 <template>
