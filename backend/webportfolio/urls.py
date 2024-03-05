@@ -11,5 +11,5 @@ urlpatterns = [
     # path("token", TokenObtainPairView.as_view(), name="token"),
     # path("token/refresh", TokenRefreshView.as_view(), name="refresh"),
     # path("githubdata", GithubInfo.as_view(), name="githubdata"),
-    path("githubdata/<str:repo>", GithubInfo.as_view(), name="githubdata"),
+    path("githubinfo/<str:repo>", GithubInfo.as_view(), name="githubdata"),
 ]

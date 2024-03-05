@@ -12,7 +12,7 @@ const props = defineProps({
 })
 
 const githubInfoData = ref(
-  await fetch(`${backendUrl}/api/githubdata/public`).then((res) => res.json())
+  await fetch(`${backendUrl}/api/githubinfo/public`).then((res) => res.json())
 )
 const chartData = ref({
   labels: Object.keys(githubInfoData.value.languagePercentages),
@@ -46,7 +46,7 @@ watch(
   async () => {
     if (props.id) {
       console.log(props.id)
-      githubInfoData.value = await fetch(`${backendUrl}/api/githubdata/${props.id}`).then((res) =>
+      githubInfoData.value = await fetch(`${backendUrl}/api/githubinfo/${props.id}`).then((res) =>
         res.json()
       )
       chartData.value = {
@@ -64,7 +64,7 @@ watch(
       }
     } else {
       console.log('no id')
-      githubInfoData.value = await fetch(`${backendUrl}/api/githubdata/public`).then((res) =>
+      githubInfoData.value = await fetch(`${backendUrl}/api/githubinfo/public`).then((res) =>
         res.json()
       )
       chartData.value = {
