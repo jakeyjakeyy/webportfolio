@@ -15,28 +15,36 @@ logger = logging.getLogger(__name__)
 GITHUB_KEY = os.getenv("GITHUB_KEY")
 
 
+def check_cache(repo_name):
+    cache = models.GithubInfoCache.objects.filter(repo=repo_name).first()
+    if cache:
+        if (datetime.now(timezone.utc) - cache.cache_time).seconds < 3600:
+            logger.info(
+                f"{datetime.now(timezone.utc)} - Sending cached data for {repo_name}"
+            )
+            return cache
+    return None
+
+
 class GithubInfo(APIView):
+
     def get(self, request, repo, format=None):
         serverTime = datetime.now(timezone.utc)
         logger.info(f"{serverTime} - GithubInfo View: Getting info for {repo}")
         if repo == "public":
             # We are getting the languages for all public repos, and my latest activity
             # First check our cache
-            cache = models.GithubInfoCache.objects.filter(repo="public").first()
+            cache = check_cache("public")
             if cache:
-                # If we have a cache, check if it's older than 1 hour
-                if (serverTime - cache.cache_time).seconds < 3600:
-                    logger.info(
-                        f"{serverTime} - GithubInfo View: Sending cached data for public repos"
-                    )
-                    return Response(
-                        {
-                            "languagePercentages": cache.language_percentages,
-                            "lastActive": cache.last_active,
-                        },
-                        status=200,
-                    )
+                return Response(
+                    {
+                        "languagePercentages": cache.language_percentages,
+                        "lastActive": cache.last_active,
+                    },
+                    status=200,
+                )
                 # else continue and update the cache
+
             # Get all public repos
             pub_repos = requests.get(
                 "https://api.github.com/users/jakeyjakeyy/repos",
@@ -88,15 +96,11 @@ class GithubInfo(APIView):
             repos = ["cityplanner", "dfchronicles", "webportfolio"]
             if repo not in repos:
                 return Response({"message": "This repo is not available"}, status=404)
-            cache = models.GithubInfoCache.objects.filter(repo=repo).first()
+            cache = check_cache(repo)
             if cache:
-                if (serverTime - cache.cache_time).seconds < 3600:
-                    logger.info(
-                        f"{serverTime} - GithubInfo View: Sending cached data for {repo}"
-                    )
-                    return Response(
-                        {"languagePercentages": cache.language_percentages}, status=200
-                    )
+                return Response(
+                    {"languagePercentages": cache.language_percentages}, status=200
+                )
             repo_languages = requests.get(
                 f"https://api.github.com/repos/jakeyjakeyy/{repo}/languages",
                 headers={"Authorization": f"Bearer {GITHUB_KEY}"},
