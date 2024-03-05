@@ -3,6 +3,7 @@ import { ref, computed, onMounted, watch } from 'vue'
 import githubInfo from '../utils/githubInfo'
 import PieChart from './PieChart.vue'
 
+const backendUrl = 'http://localhost:8000'
 const props = defineProps({
   id: {
     type: String,
@@ -10,7 +11,9 @@ const props = defineProps({
   }
 })
 
-const githubInfoData = ref(await githubInfo('jakeyjakeyy'))
+const githubInfoData = ref(
+  await fetch(`${backendUrl}/api/githubdata/public`).then((res) => res.json())
+)
 const chartData = ref({
   labels: Object.keys(githubInfoData.value.languagePercentages),
   datasets: [
@@ -43,7 +46,9 @@ watch(
   async () => {
     if (props.id) {
       console.log(props.id)
-      githubInfoData.value = await githubInfo(props.id)
+      githubInfoData.value = await fetch(`${backendUrl}/api/githubdata/${props.id}`).then((res) =>
+        res.json()
+      )
       chartData.value = {
         labels: Object.keys(githubInfoData.value.languagePercentages),
         datasets: [
@@ -59,7 +64,9 @@ watch(
       }
     } else {
       console.log('no id')
-      githubInfoData.value = await githubInfo('jakeyjakeyy')
+      githubInfoData.value = await fetch(`${backendUrl}/api/githubdata/public`).then((res) =>
+        res.json()
+      )
       chartData.value = {
         labels: Object.keys(githubInfoData.value.languagePercentages),
         datasets: [
