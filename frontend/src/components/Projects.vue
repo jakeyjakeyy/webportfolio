@@ -62,7 +62,14 @@ const toggleActive = (id: string) => {
         id="cityplanner"
       />
 
-      <Project />
+      <Project
+        title="Web Portfolio"
+        description="This website! A web app that allows users to view my projects, information, and contact me."
+        :technologies="['Vue', 'Vite', 'Typescript']"
+        link="https://github.com/jakeyjakeyy/webportfolio"
+        @click="toggleActive('webportfolio')"
+        id="webportfolio"
+      />
     </div>
   </div>
 </template>
