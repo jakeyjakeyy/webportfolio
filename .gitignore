@@ -1,3 +1,4 @@
 .env
 __pycache__
 backend/webportfolio/__pycache__/
+backend/backend/__pycache__/
