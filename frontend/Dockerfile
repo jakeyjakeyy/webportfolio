@@ -1,12 +1,12 @@
-# build
-FROM node:lts-alpine
+# build stage
+FROM node:lts-alpine as build-stage
 WORKDIR /app/frontend
 COPY package*.json ./
 RUN npm install
 COPY . .
 RUN npm run build
 
-# production
+# production stage
 FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/frontend/dist /usr/share/nginx/html
 EXPOSE 80
