@@ -15,6 +15,7 @@
                 Creating infastructure and backend solutions is very satisfying to me, and I am
                 always looking for new ways to improve my skills and learn the latest technologies.
               </p>
+              <br />
               <p>
                 The opportunity to constantly learn and improve my skills as a developer drives me
                 every day, and I am proud to hold certificates from Harvard's CS50 in both
@@ -27,6 +28,13 @@
                   href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter"
                   >Introduction to Computer Science</a
                 >.
+              </p>
+              <br />
+              <p>
+                I have worked in food service for many years, including a team management position
+                as a Shift Lead at Starbucks. I have been hard at work learning and improving my
+                skills as a developer, and I am excited to bring my passion for technology and
+                problem solving to a new career in software development.
               </p>
               <br />
               <p>
@@ -54,17 +62,6 @@
                 <ul>
                   <li>Certificate in Web Programming with Python and JavaScript</li>
                   <li>Certificate in Introduction to Computer Science</li>
-                </ul>
-              </ul>
-              <li>Live Oak</li>
-              <ul>
-                <li>Dates Attended</li>
-                <ul>
-                  <li>2012-2016</li>
-                </ul>
-                <li>Degree</li>
-                <ul>
-                  <li>High School Diploma</li>
                 </ul>
               </ul>
             </ul>
