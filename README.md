@@ -2,7 +2,7 @@
 
 This is a personal web portfolio project that showcases my projects, skills, and information. It's built using a variety of technologies and features, including Vue.js, Docker, PostgreSQL, and caching.
 
-Live site is available at [jakerichards.info](jakerichards.info)
+Live site is available at [jakerichards.info](https://www.jakerichards.info)
 
 ## Technologies Used
 
