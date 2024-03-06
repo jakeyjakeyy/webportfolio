@@ -8,15 +8,17 @@ services:
       - "5432:5432"
 
     environment:
-      POSTGRES_PASSWORD: /run/secrets/db_password
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
 
     volumes:
       - ./data/db:/var/lib/postgresql/data
 
   frontend:
-    image: docker.io/jakerichards/webportfolio_frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
 
     ports:
       - "5173:5173"
@@ -29,7 +31,9 @@ services:
       - backend
 
   backend:
-    image: docker.io/jakerichards/webportfolio_backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
 
     ports:
       - "8000:8000"
@@ -38,14 +42,10 @@ services:
       - ./backend:/app/backend
 
     environment:
-      POSTGRES_PASSWORD: /run/secrets/db_password
-      POSTGRES_USER: postgres
-      POSTGRES_DB: postgres
-      DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=postgres
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/postgres
 
     depends_on:
       - db
-
-secrets:
-  db_password:
-    file: db_password.txt
