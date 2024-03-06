@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, watch } from 'vue'
-import githubInfo from '../utils/githubInfo'
+import { ref, computed, watch } from 'vue'
 import PieChart from './PieChart.vue'
 
 const backendUrl = 'http://localhost:8000'

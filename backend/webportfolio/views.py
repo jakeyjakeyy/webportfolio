@@ -26,7 +26,7 @@ def check_cache(repo_name, forced=False):
     Returns:
         GithubInfoCache: Cached data for the repo, or None if the cache is expired.
     """
-    cache = models.GithubInfoCache.objects.filter(repo=repo_name).first()
+    cache = models.GithubInfoCache.objects.filter(repo=repo_name).last()
     if cache:
         if (datetime.now(timezone.utc) - cache.cache_time).seconds < 3600:
             logger.info(
