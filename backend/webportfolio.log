@@ -9,3 +9,39 @@ Watching for file changes with StatReloader
 Watching for file changes with StatReloader
 2024-03-06 06:31:04.895638+00:00 - GithubInfo View: Getting info for dfchronicles
 2024-03-06 06:31:04.909522+00:00 - check_cache: Sending cached data for dfchronicles
+2024-03-06 07:02:14.269383+00:00 - GithubInfo View: Getting info for public
+2024-03-06 07:02:14.282708+00:00 - check_cache: Sending cached data for public
+2024-03-06 07:02:15.085830+00:00 - GithubInfo View: Getting info for cityplanner
+2024-03-06 07:02:15.099642+00:00 - check_cache: Sending cached data for cityplanner
+2024-03-06 07:02:15.901074+00:00 - GithubInfo View: Getting info for webportfolio
+2024-03-06 07:02:15.914919+00:00 - check_cache: Sending cached data for webportfolio
+2024-03-06 07:02:16.701483+00:00 - GithubInfo View: Getting info for public
+2024-03-06 07:02:16.717383+00:00 - check_cache: Sending cached data for public
+/app/backend/webportfolio/views.py changed, reloading.
+Watching for file changes with StatReloader
+<rest_framework.request.Request: GET '/api/githubinfo/dfchronicles'>
+2024-03-06 07:33:00.683227+00:00 - GithubInfo View: Getting info for dfchronicles
+/app/backend/webportfolio/views.py changed, reloading.
+Watching for file changes with StatReloader
+<rest_framework.request.Request: GET '/api/githubinfo/cityplanner'>
+2024-03-06 07:33:25.098981+00:00 - GithubInfo View: Getting info for cityplanner
+/app/backend/webportfolio/views.py changed, reloading.
+Watching for file changes with StatReloader
+2024-03-06 07:33:32.431445+00:00 - GithubInfo View: Getting info for dfchronicles
+2024-03-06 07:33:32.446696+00:00 - check_cache: Sending cached data for dfchronicles
+2024-03-06 07:33:33.148504+00:00 - GithubInfo View: Getting info for cityplanner
+2024-03-06 07:33:33.162772+00:00 - check_cache: Sending cached data for cityplanner
+2024-03-06 07:33:33.596380+00:00 - GithubInfo View: Getting info for public
+2024-03-06 07:33:34.264727+00:00 - GithubInfo View: Getting info for cityplanner
+2024-03-06 07:33:34.287585+00:00 - check_cache: Sending cached data for cityplanner
+2024-03-06 07:33:34.863874+00:00 - GithubInfo View: Getting info for webportfolio
+2024-03-06 07:33:35.731690+00:00 - GithubInfo View: Getting info for public
+2024-03-06 07:33:35.744990+00:00 - check_cache: Sending cached data for public
+2024-03-06 08:12:16.087734+00:00 - GithubInfo View: Getting info for dfchronicles
+2024-03-06 08:12:16.105261+00:00 - check_cache: Sending cached data for dfchronicles
+2024-03-06 08:12:16.845251+00:00 - GithubInfo View: Getting info for public
+2024-03-06 08:12:16.860002+00:00 - check_cache: Sending cached data for public
+2024-03-06 08:12:17.194416+00:00 - GithubInfo View: Getting info for cityplanner
+2024-03-06 08:12:17.208356+00:00 - check_cache: Sending cached data for cityplanner
+2024-03-06 08:12:17.843779+00:00 - GithubInfo View: Getting info for public
+2024-03-06 08:12:17.858889+00:00 - check_cache: Sending cached data for public
