@@ -17,11 +17,18 @@ watch(projectActive, (newValue) => {
   let activeElement = document.getElementById(newValue)
   activeElement?.classList.add('active')
 })
+
 const toggleActive = (id: string) => {
   if (projectActive.value === id) {
     projectActive.value = ''
   } else {
     projectActive.value = id
+  }
+}
+
+const handleKeyPress = (event: KeyboardEvent) => {
+  if (event.key === 'Enter') {
+    toggleActive((event.target as HTMLElement)?.id)
   }
 }
 </script>
@@ -42,6 +49,8 @@ const toggleActive = (id: string) => {
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
         @click="toggleActive('dfchronicles')"
         id="dfchronicles"
+        tabindex="0"
+        @keypress="handleKeyPress"
       />
       <Project
         title="City Trip Planner"
@@ -60,6 +69,8 @@ const toggleActive = (id: string) => {
         link="https://github.com/jakeyjakeyy/cityplanner"
         @click="toggleActive('cityplanner')"
         id="cityplanner"
+        tabindex="0"
+        @keypress="handleKeyPress"
       />
 
       <Project
@@ -69,6 +80,8 @@ const toggleActive = (id: string) => {
         link="https://github.com/jakeyjakeyy/webportfolio"
         @click="toggleActive('webportfolio')"
         id="webportfolio"
+        tabindex="0"
+        @keypress="handleKeyPress"
       />
     </div>
   </div>

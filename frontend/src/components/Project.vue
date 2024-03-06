@@ -25,14 +25,17 @@ const curIndex = ref(0)
           <p>{{ description }}</p>
         </div>
         <div class="technologies">
-          <ul>
-            <li v-for="technology in technologies?.slice(0, 5)">
-              {{ technology }}
-            </li>
-          </ul>
-          <ul v-if="technologies && technologies.length > 5">
-            <li v-for="technology in technologies.slice(5)">{{ technology }}</li>
-          </ul>
+          <div>Technologies and Features:</div>
+          <div class="tech-list">
+            <ul>
+              <li v-for="technology in technologies?.slice(0, 5)">
+                {{ technology }}
+              </li>
+            </ul>
+            <ul v-if="technologies && technologies.length > 5">
+              <li v-for="technology in technologies.slice(5)">{{ technology }}</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="link">
@@ -127,11 +130,21 @@ img {
 
 .technologies {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
   align-items: center;
   text-align: start;
   padding-left: 1rem;
   height: 50%;
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  width: 100%;
+  padding-left: 1rem;
 }
 </style>

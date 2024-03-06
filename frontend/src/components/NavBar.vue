@@ -64,10 +64,11 @@ onscroll = () => {
   }
 
   onkeydown = (e: KeyboardEvent) => {
-    e.preventDefault()
     if (e.key === 'ArrowUp') {
+      e.preventDefault()
       up()
     } else if (e.key === 'ArrowDown') {
+      e.preventDefault()
       down()
     }
   }

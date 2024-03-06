@@ -30,12 +30,12 @@ def check_cache(repo_name, forced=False):
     if cache:
         if (datetime.now(timezone.utc) - cache.cache_time).seconds < 3600:
             logger.info(
-                f"{datetime.now(timezone.utc)} - Sending cached data for {repo_name}"
+                f"{datetime.now(timezone.utc)} - check_cache: Sending cached data for {repo_name}"
             )
             return cache
         elif forced:
             logger.info(
-                f"{datetime.now(timezone.utc)} - Sending forced cached data for {repo_name}"
+                f"{datetime.now(timezone.utc)} - check_cahce: Sending forced cached data for {repo_name}"
             )
             return cache
     return None
@@ -60,10 +60,30 @@ def make_github_request(endpoint, repo_name=None):
         return response.json()
     except requests.exceptions.RequestException as e:
         logger.error(
-            f"{datetime.now(timezone.utc)} - GithubInfoView: Error making request to {url}: {e}\n Forcing cache for {repo_name}"
+            f"{datetime.now(timezone.utc)} - make_github_request: Error making request to {url}: {e}\n Forcing cache for {repo_name}"
         )
         if repo_name:
             return check_cache(repo_name, forced=True)
+
+
+def average_languages(languages):
+    """
+    Average the languages in a dictionary.
+
+    Args:
+        languages (dict): A dictionary of languages and their byte counts.
+
+    Returns:
+        dict: A dictionary of languages and their percentages.
+    """
+    total = sum(languages.values())
+    for language in languages:
+        languages[language] = round((languages[language] / total) * 100)
+    # purge any languages that are <= 1%
+    # prevents cluttering the piechart with (generally) default files and languages
+    languages = {k: v for k, v in languages.items() if v > 1}
+
+    return languages
 
 
 class GithubInfo(APIView):
@@ -101,9 +121,7 @@ class GithubInfo(APIView):
                     else:
                         languages[language] = repo_languages[language]
 
-            for language in languages:
-                # Average the languages
-                languages[language] = round(languages[language] / len(pub_repos))
+            repo_languages = average_languages(languages)
 
             # Get last activity
             activity = make_github_request("users/jakeyjakeyy/events")
@@ -134,6 +152,8 @@ class GithubInfo(APIView):
             repo_languages = make_github_request(
                 f"repos/jakeyjakeyy/{repo}/languages", repo
             )
+
+            repo_languages = average_languages(repo_languages)
 
             repo_cache = models.GithubInfoCache.objects.create(
                 repo=repo, language_percentages=repo_languages
