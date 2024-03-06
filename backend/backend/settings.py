@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["jakerichards.info"]
 
 
 # Application definition
@@ -136,7 +136,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "jakerichards.info",
 ]
 
 LOGGING = {
@@ -157,3 +157,6 @@ LOGGING = {
         "level": "INFO",
     },
 }
+
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
