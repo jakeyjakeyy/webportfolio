@@ -1,6 +1,11 @@
 server { 
   server_name jakerichards.info;
-  listen        80;  
+  listen        443 ssl;
+  listen        [::]:443 ssl;
+
+  ssl_certificate /root/ssl_certificate.pem;
+  ssl_certificate_key /root/ssl_private.pem;
+
   gzip_vary on;
   gzip_proxied any;
   gzip_comp_level 6;
