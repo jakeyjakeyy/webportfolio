@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["jakerichards.info", "localhost", "0.0.0.0"]
+ALLOWED_HOSTS = ["jakerichards.info", "localhost", "0.0.0.0", "146.190.38.15"]
 
 
 # Application definition
@@ -139,6 +139,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOWED_ORIGINS = [
     "https://jakerichards.info",
 ]
+CSRF_TRUSTED_ORIGINS = ["https://jakerichards.info"]
+
 
 LOGGING = {
     "version": 1,
