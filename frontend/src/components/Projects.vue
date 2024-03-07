@@ -118,12 +118,15 @@ const handleKeyPress = (event: KeyboardEvent) => {
   flex-direction: row;
   justify-content: space-evenly;
   min-height: fit-content;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 1200px) {
   .projects {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: start;
+    max-width: 100vw;
+    overflow-x: scroll;
   }
 }
 </style>

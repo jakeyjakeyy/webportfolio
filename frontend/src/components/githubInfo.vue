@@ -57,7 +57,7 @@ watch(
           }
         ]
       }
-      if (githubInfoData.value.lastActive === 'N/A') {
+      if (!githubInfoData.value.lastActive) {
         lastActive = null
       } else {
         lastActive = new Date(githubInfoData.value.lastActive)

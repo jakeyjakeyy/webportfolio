@@ -61,7 +61,8 @@ const curIndex = ref(0)
 
 @media (max-width: 1200px) {
   .project {
-    width: 75%;
+    min-width: 75%;
+    margin: 0 1rem;
   }
 }
 
