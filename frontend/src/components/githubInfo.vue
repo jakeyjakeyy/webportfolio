@@ -2,7 +2,7 @@
 import { ref, computed, watch } from 'vue'
 import PieChart from './PieChart.vue'
 
-const backendUrl = 'http://localhost:8000'
+const backendUrl = 'https://jakerichards.info'
 const props = defineProps({
   id: {
     type: String,

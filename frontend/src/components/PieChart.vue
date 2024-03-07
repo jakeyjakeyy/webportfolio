@@ -11,6 +11,6 @@ defineProps({
 
 <template>
   <div class="pieChart">
-    <Pie id="githubInfoPie" :data="data" />
+    <Pie id="githubInfoPie" :data="data as any" />
   </div>
 </template>
