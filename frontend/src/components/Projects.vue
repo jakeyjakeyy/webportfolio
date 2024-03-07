@@ -43,15 +43,16 @@ const handleKeyPress = (event: KeyboardEvent) => {
     </div>
     <div class="projects">
       <Project
-        title="Dwarf Fortress Chronicles"
-        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
-        :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI API']"
-        link="https://www.github.com/jakeyjakeyy/dfchronicles"
-        @click="toggleActive('dfchronicles')"
-        id="dfchronicles"
+        title="Web Portfolio"
+        description="This website! A web app that allows users to view my projects, information, and contact me."
+        :technologies="['Vue', 'Vite', 'Typescript', 'Docker', 'PostgreSQL', 'Caching']"
+        link="https://github.com/jakeyjakeyy/webportfolio"
+        @click="toggleActive('webportfolio')"
+        id="webportfolio"
         tabindex="0"
         @keypress="handleKeyPress"
       />
+
       <Project
         title="City Trip Planner"
         description="A web app that allows users to create an itinerary from a custom generated list of locations to visit based on their interests."
@@ -72,14 +73,13 @@ const handleKeyPress = (event: KeyboardEvent) => {
         tabindex="0"
         @keypress="handleKeyPress"
       />
-
       <Project
-        title="Web Portfolio"
-        description="This website! A web app that allows users to view my projects, information, and contact me."
-        :technologies="['Vue', 'Vite', 'Typescript', 'Docker', 'PostgreSQL', 'Caching']"
-        link="https://github.com/jakeyjakeyy/webportfolio"
-        @click="toggleActive('webportfolio')"
-        id="webportfolio"
+        title="Dwarf Fortress Chronicles"
+        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
+        :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI API']"
+        link="https://www.github.com/jakeyjakeyy/dfchronicles"
+        @click="toggleActive('dfchronicles')"
+        id="dfchronicles"
         tabindex="0"
         @keypress="handleKeyPress"
       />
