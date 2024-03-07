@@ -45,7 +45,15 @@ const handleKeyPress = (event: KeyboardEvent) => {
       <Project
         title="Web Portfolio"
         description="This website! A web app that allows users to view my projects, information, and contact me."
-        :technologies="['Vue', 'Vite', 'Typescript', 'Docker', 'PostgreSQL', 'Caching']"
+        :technologies="[
+          'Vue',
+          'Vite',
+          'Typescript',
+          'Docker',
+          'PostgreSQL',
+          'Caching',
+          'DigitalOcean Droplet'
+        ]"
         link="https://github.com/jakeyjakeyy/webportfolio"
         @click="toggleActive('webportfolio')"
         id="webportfolio"

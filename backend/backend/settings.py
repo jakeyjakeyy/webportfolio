@@ -138,6 +138,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
     "https://jakerichards.info",
+    "http://localhost:5173",
 ]
 CSRF_TRUSTED_ORIGINS = ["https://jakerichards.info"]
 
@@ -160,6 +161,3 @@ LOGGING = {
         "level": "INFO",
     },
 }
-
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True

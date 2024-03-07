@@ -191,4 +191,25 @@ ul {
 .listHead {
   color: var(--color-accent);
 }
+
+@media (max-width: 768px) {
+  #aboutContainer {
+    padding: 0 1rem 0;
+  }
+
+  .listContainer {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .containerLeft {
+    width: 100%;
+    margin-right: 0;
+  }
+  .containerRight {
+    width: 100%;
+    padding-top: 1rem;
+  }
+}
 </style>
