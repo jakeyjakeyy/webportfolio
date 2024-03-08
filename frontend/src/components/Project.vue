@@ -50,12 +50,13 @@ const curIndex = ref(0)
   display: flex;
   flex-direction: column;
   width: 25%;
-  height: fit-content;
-  border: 1px solid var(--color-background-soft);
-  background-color: var(--color-background-soft);
+  border: 1px solid var(--background);
+  background-color: var(--primary);
   border-radius: 80px;
   height: 550px;
   transition: all 0.2s ease-in-out;
+  padding: 30px;
+
   cursor: pointer;
 }
 
@@ -67,12 +68,12 @@ const curIndex = ref(0)
 }
 
 .project:hover {
-  border: 1px solid var(--color-accent);
+  border: 1px solid var(--accent);
 }
 
 .active {
-  border: 1px solid var(--color-accent);
-  box-shadow: 4px 5px 4px 0 var(--color-background) inset;
+  border: 1px solid var(--background);
+  box-shadow: 4px 5px 4px 0 rgba(0, 0, 0, 0.2) inset;
   transform: scale(0.99);
 }
 
@@ -94,7 +95,9 @@ img {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 3rem 3rem 1rem;
+  background-color: var(--secondary);
+  border-radius: 50px;
+  padding: 1rem;
 }
 
 .title {

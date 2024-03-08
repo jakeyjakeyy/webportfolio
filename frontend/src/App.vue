@@ -20,5 +20,7 @@ import ContentView from './views/ContentView.vue'
   width: 100vw;
   margin: 0;
   overflow: hidden;
+  background-color: var(--background);
+  color: var(--text);
 }
 </style>

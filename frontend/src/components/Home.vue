@@ -27,8 +27,8 @@ onMounted(() => {
   <div id="homeContainer">
     <div class="welcome">
       <div class="name">
-        <h1 class="green">Jake</h1>
-        <h1 class="blue">Richards</h1>
+        <h1 class="primary">Jake</h1>
+        <h1>Richards</h1>
       </div>
       <div class="description">
         <h3 class="dynamic">{{ list[index] }}</h3>
@@ -67,10 +67,14 @@ h3 {
 }
 .dynamic {
   margin-right: 0.5rem;
-  color: var(--color-accent);
+  color: var(--secondary);
   font-weight: bold;
   text-align: center;
   width: 30%;
+}
+
+.primary {
+  color: var(--primary);
 }
 
 @media (min-width: 1024px) {

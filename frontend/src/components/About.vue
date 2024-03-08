@@ -8,7 +8,7 @@
         <div class="listDiv" id="top">
           <div class="list">
             <h3 class="listHead">About</h3>
-            <div class="about">
+            <div class="cardBody">
               <p>
                 I am a passionate and motivated software developer proficient in languages and
                 technologies such as Python, TypeScript, Javascript, React, Vue, Django, and more.
@@ -51,20 +51,22 @@
         <div class="listDiv" id="bottom">
           <div class="list">
             <h3 class="listHead">Certifications and Education</h3>
-            <ul>
-              <li>HarvardX</li>
+            <div class="cardBody">
               <ul>
-                <li>Dates Attended</li>
+                <li>HarvardX</li>
                 <ul>
-                  <li>2023</li>
-                </ul>
-                <li>Degree</li>
-                <ul>
-                  <li>Certificate in Web Programming with Python and JavaScript</li>
-                  <li>Certificate in Introduction to Computer Science</li>
+                  <li>Dates Attended</li>
+                  <ul>
+                    <li>2023</li>
+                  </ul>
+                  <li>Degree</li>
+                  <ul>
+                    <li>Certificate in Web Programming with Python and JavaScript</li>
+                    <li>Certificate in Introduction to Computer Science</li>
+                  </ul>
                 </ul>
               </ul>
-            </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -72,7 +74,7 @@
       <div class="containerRight">
         <div class="list">
           <h3 class="listHead">Skills</h3>
-          <div id="rightList">
+          <div class="rightList cardBody">
             <ul>
               <li>Programming Languages</li>
               <ul>
@@ -133,14 +135,7 @@ ul {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: var(--color-background);
   padding: 0 3rem 0;
-}
-
-.about {
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: var(--color-background);
 }
 
 .listContainer {
@@ -173,7 +168,7 @@ ul {
 #bottom {
   height: 100%;
 }
-#rightList {
+.rightList {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -181,7 +176,7 @@ ul {
 }
 
 .list {
-  background-color: var(--color-background-soft);
+  background-color: var(--primary);
   border-radius: 1rem;
   padding: 1rem;
   height: 100%;
@@ -189,7 +184,13 @@ ul {
 }
 
 .listHead {
-  color: var(--color-accent);
+  color: var(--text);
+}
+
+.cardBody {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--secondary);
 }
 
 @media (max-width: 768px) {
@@ -211,5 +212,15 @@ ul {
     width: 100%;
     padding-top: 1rem;
   }
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--primary);
 }
 </style>

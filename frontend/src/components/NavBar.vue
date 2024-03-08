@@ -219,6 +219,7 @@ onload = () => {
   height: 100vh;
   width: 60px;
   z-index: 100;
+  color: var(--secondary);
 }
 .hidden {
   opacity: 0;
