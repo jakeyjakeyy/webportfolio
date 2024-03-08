@@ -18,12 +18,13 @@
               <br />
               <p>
                 The opportunity to constantly learn and improve my skills as a developer drives me
-                every day, and I am proud to hold certificates from Harvard's CS50 in both
+                every day, and I am proud to hold certificates from Harvard's CS50, in both
                 <a
                   href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"
                 >
                   Web Programming with Python and JavaScript</a
-                >, and
+                >
+                and
                 <a
                   href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter"
                   >Introduction to Computer Science</a
@@ -39,11 +40,9 @@
               <br />
               <p>
                 When programming, I enjoy identifying and overcoming challenges, and making
-                meaningful contributions to projects that improve lives or simply bring joy.
-              </p>
-              <p>
-                Beyond the computer, I have a passion for music, watching sports, and keeping up
-                with updates in technology and science.
+                meaningful contributions to projects that improve lives or simply bring joy. Beyond
+                the computer, I have a passion for music, watching sports, and keeping up with
+                updates in technology and science.
               </p>
             </div>
           </div>
@@ -96,10 +95,10 @@
                 <li>Docker</li>
                 <li>VS Code</li>
               </ul>
-              <li>Database Management Systems</li>
+              <li>Databases</li>
               <ul>
-                <li>SQL</li>
                 <li>Postgres</li>
+                <li>SQL based databases</li>
               </ul>
               <li>Operating Systems</li>
               <ul>

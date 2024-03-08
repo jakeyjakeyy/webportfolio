@@ -39,7 +39,7 @@ const curIndex = ref(0)
         </div>
       </div>
       <div class="link">
-        <a :href="link">Link</a>
+        <a :href="link">Repo</a>
       </div>
     </div>
   </div>
@@ -50,6 +50,7 @@ const curIndex = ref(0)
   display: flex;
   flex-direction: column;
   width: 25%;
+  box-sizing: border-box;
   border: 1px solid var(--background);
   background-color: var(--primary);
   border-radius: 80px;
@@ -62,7 +63,16 @@ const curIndex = ref(0)
 
 @media (max-width: 1200px) {
   .project {
-    min-width: 75%;
+    width: 75vw;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    min-width: fit-content;
+    height: 75vh;
+    width: 99vw;
     margin: 0 1rem;
   }
 }
@@ -112,7 +122,18 @@ img {
 
 .link {
   display: flex;
-  justify-content: center;
+  align-self: center;
+  width: fit-content;
+  background-color: var(--primary);
+  border-radius: 1rem;
+  padding: 0.25rem 0.5rem;
+  a {
+    color: var(--background);
+  }
+}
+
+.link:hover {
+  background-color: var(--accent);
 }
 
 .body {
@@ -149,6 +170,6 @@ img {
   align-items: start;
   text-align: start;
   width: 100%;
-  padding-left: 1rem;
+  padding-right: 1rem;
 }
 </style>

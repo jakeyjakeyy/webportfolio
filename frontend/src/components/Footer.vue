@@ -16,7 +16,7 @@
 footer {
   width: 100%;
   height: 2.5rem;
-  background-color: var(--color-background-soft);
+  background-color: var(--background-soft);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,10 @@ footer {
 .icon {
   width: 25px;
   height: 25px;
+}
+
+a {
+  color: var(--text);
 }
 </style>
 ```

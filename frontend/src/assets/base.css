@@ -3,6 +3,7 @@
 :root {
   --text: #0f0f0b;
   --background: #faf9f5;
+  --background-soft: #eeebdd;
   --primary: #938451;
   --secondary: #cdc398;
   --accent: #c3b26f;
@@ -12,6 +13,7 @@
   :root {
     --text: #f4f4f0;
     --background: #0a0905;
+    --background-soft: #221e11;
     --primary: #9e8f57;
     --secondary: #675d32;
     --accent: #907f3c;
