@@ -52,7 +52,7 @@ const curIndex = ref(0)
   width: 25%;
   box-sizing: border-box;
   border: 1px solid var(--background);
-  background-color: var(--primary);
+  background-color: var(--secondary);
   border-radius: 80px;
   height: 550px;
   transition: all 0.2s ease-in-out;
@@ -78,7 +78,7 @@ const curIndex = ref(0)
 }
 
 .project:hover {
-  border: 1px solid var(--accent);
+  border: 1px solid var(--primary);
 }
 
 .active {
@@ -166,7 +166,7 @@ img {
 .tech-list {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: center;
   align-items: start;
   text-align: start;
   width: 100%;

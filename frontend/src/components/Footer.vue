@@ -16,7 +16,7 @@
 footer {
   width: 100%;
   height: 2.5rem;
-  background-color: var(--background-soft);
+  background-color: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;

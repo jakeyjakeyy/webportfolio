@@ -6,7 +6,7 @@
     <div class="listContainer">
       <div class="containerLeft">
         <div class="listDiv" id="top">
-          <div class="list">
+          <div class="list backgroundPrimary">
             <h3 class="listHead">About</h3>
             <div class="cardBody">
               <p>
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="listDiv" id="bottom">
-          <div class="list">
+          <div class="list backgroundSecondary">
             <h3 class="listHead">Certifications and Education</h3>
             <div class="cardBody">
               <ul>
@@ -71,7 +71,7 @@
       </div>
       <br />
       <div class="containerRight">
-        <div class="list">
+        <div class="list backgroundAccent">
           <h3 class="listHead">Skills</h3>
           <div class="rightList cardBody">
             <ul>
@@ -189,7 +189,23 @@ ul {
 .cardBody {
   border-radius: 1rem;
   padding: 1rem;
+}
+
+.backgroundPrimary {
+  background-color: var(--primary);
+  a {
+    color: var(--secondary);
+  }
+  a:hover {
+    color: var(--accent);
+  }
+}
+.backgroundSecondary {
   background-color: var(--secondary);
+}
+
+.backgroundAccent {
+  background-color: var(--accent);
 }
 
 @media (max-width: 768px) {
@@ -214,12 +230,12 @@ ul {
 }
 
 a {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
-  color: var(--primary);
+  color: var(--accent);
 }
 </style>

@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --text: #0f0f0b;
-  --background: #faf9f5;
-  --background-soft: #eeebdd;
-  --primary: #938451;
-  --secondary: #cdc398;
-  --accent: #c3b26f;
+  --text: #110e0e;
+  --background: #fcfcfc;
+  --primary: #98837c;
+  --secondary: #b1beac;
+  --accent: #94ad98;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #f4f4f0;
-    --background: #0a0905;
-    --background-soft: #221e11;
-    --primary: #9e8f57;
-    --secondary: #675d32;
-    --accent: #907f3c;
+    --text: #f1eeee;
+    --background: #030303;
+    --primary: #836e67;
+    --secondary: #465341;
+    --accent: #526b56;
   }
 }
 
