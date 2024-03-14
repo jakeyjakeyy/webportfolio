@@ -129,4 +129,10 @@ const handleKeyPress = (event: KeyboardEvent) => {
     overflow-x: scroll;
   }
 }
+@media (max-width: 768px) {
+  .projects {
+    padding-left: 2vw;
+    scroll-snap-type: x mandatory;
+  }
+}
 </style>

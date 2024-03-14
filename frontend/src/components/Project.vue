@@ -70,10 +70,12 @@ const curIndex = ref(0)
 
 @media (max-width: 768px) {
   .project {
-    min-width: fit-content;
     height: 75vh;
-    width: 99vw;
-    margin: 0 1rem;
+    width: 95vw;
+    margin: 0;
+    flex-shrink: 0;
+    margin-right: 1vw;
+    scroll-snap-align: center;
   }
 }
 

@@ -100,6 +100,15 @@ watch(
   padding: 1rem;
 }
 
+@media (max-width: 768px) {
+  .githubInfo {
+    flex-direction: column;
+  }
+  .lastActive {
+    margin-top: 1rem;
+  }
+}
+
 .lastActive {
   display: flex;
   flex-direction: column;
