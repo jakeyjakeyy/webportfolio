@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:700|Poppins:400');
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --text: #110e0e;
-  --background: #fcfcfc;
-  --primary: #98837c;
-  --secondary: #b1beac;
-  --accent: #94ad98;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
+  .light {
+    --text: #110e0e;
+    --background: #fcfcfc;
+    --primary: #98837c;
+    --secondary: #b1beac;
+    --accent: #94ad98;
+  }
+  .dark {
     --text: #f1eeee;
     --background: #030303;
     --primary: #836e67;
@@ -17,6 +16,16 @@
     --accent: #526b56;
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f1eeee;
+    --background: #030303;
+    --primary: #836e67;
+    --secondary: #465341;
+    --accent: #526b56;
+  }
+} */
 
 *,
 *::before,

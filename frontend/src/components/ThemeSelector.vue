@@ -1,10 +1,32 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-let themeLight = ref(false)
+import { on } from 'events'
+import { onMounted, ref } from 'vue'
+let themeLight = ref(true)
+let root: HTMLElement = document.getElementById('app') as HTMLElement
 
 const toggleTheme = () => {
   themeLight.value = !themeLight.value
+  if (root && themeLight.value) {
+    root.classList.add('light')
+    root.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+  } else if (root) {
+    root.classList.add('dark')
+    root.classList.remove('light')
+    localStorage.setItem('theme', 'dark')
+  }
 }
+
+onMounted(() => {
+  const localTheme = localStorage.getItem('theme')
+  if (localTheme === 'light') {
+    themeLight.value = true
+  } else if (localTheme === 'dark') {
+    themeLight.value = false
+    root.classList.add('dark')
+    root.classList.remove('light')
+  }
+})
 </script>
 
 <template>

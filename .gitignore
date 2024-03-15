@@ -1,8 +1,8 @@
 .env
 __pycache__/
 backend/webportfolio/__pycache__/
-db_password.txt
 backend/webportfolio.log
 docker-compose.yml
 backend/backend/settings.py
 frontend/Dockerfile
+data/db/
