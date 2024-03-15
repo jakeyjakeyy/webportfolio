@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { on } from 'events'
 import { onMounted, ref } from 'vue'
 let themeLight = ref(true)
 let root: HTMLElement = document.getElementById('app') as HTMLElement
