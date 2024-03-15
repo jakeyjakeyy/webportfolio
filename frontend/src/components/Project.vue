@@ -84,7 +84,7 @@ const curIndex = ref(0)
 }
 
 .active {
-  border: 1px solid var(--background);
+  border: 1px solid var(--accent);
   box-shadow: 4px 5px 4px 0 rgba(0, 0, 0, 0.2) inset;
   transform: scale(0.99);
 }

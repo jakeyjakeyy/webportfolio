@@ -30,4 +30,3 @@ a {
   color: var(--text);
 }
 </style>
-```

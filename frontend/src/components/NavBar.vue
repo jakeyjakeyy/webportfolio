@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import ThemeSelector from './ThemeSelector.vue'
 let contentSelection = ref('home')
 let homeElement: HTMLElement | null = null
 let aboutElement: HTMLElement | null = null
@@ -87,6 +88,9 @@ onload = () => {
 
 <template>
   <div class="navContainer">
+    <div class="themeContainer">
+      <ThemeSelector />
+    </div>
     <div id="arrowUp" class="arrowUpDisappear">
       <v-icon name="bi-arrow-up-circle" scale="2" @click="up" />
     </div>
@@ -229,5 +233,11 @@ onload = () => {
 #arrowDown {
   cursor: pointer;
   position: absolute;
+}
+
+.themeContainer {
+  position: absolute;
+  top: 0;
+  margin-top: 25px;
 }
 </style>
