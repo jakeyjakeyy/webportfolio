@@ -9,7 +9,7 @@
         </a>
       </div>
       <div class="icon">
-        <a href="mailto:jakerichards210@gmail.com" aria-label="email">
+        <a href="mailto:contact@jakerichards.info" aria-label="email">
           <v-icon name="hi-solid-mail" scale="1.25" />
         </a>
       </div>
