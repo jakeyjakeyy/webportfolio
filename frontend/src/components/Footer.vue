@@ -8,6 +8,11 @@
           <v-icon name="fa-github" scale="1.25" />
         </a>
       </div>
+      <div class="icon">
+        <a href="mailto:jakerichards210@gmail.com" aria-label="email">
+          <v-icon name="hi-solid-mail" scale="1.25" />
+        </a>
+      </div>
     </div>
   </footer>
 </template>
@@ -21,9 +26,17 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.footerIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon {
   width: 25px;
   height: 25px;
+  margin: 0 0.5rem;
 }
 
 a {
