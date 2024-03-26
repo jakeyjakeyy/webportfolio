@@ -12,7 +12,7 @@
               <p>
                 I am a passionate and motivated software developer proficient in languages and
                 technologies such as Python, TypeScript, Javascript, React, Vue, Django, and more.
-                Creating infastructure and backend solutions is very satisfying to me, and I am
+                Creating infrastructure and backend solutions is very satisfying to me, and I am
                 always looking for new ways to improve my skills and learn the latest technologies.
               </p>
               <br />
