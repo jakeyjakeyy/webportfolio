@@ -7,9 +7,16 @@ import App from './App.vue'
 import router from './router'
 
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
-import { FaGithub, BiArrowDownCircle, BiArrowUpCircle, FaMoon, FaSun } from 'oh-vue-icons/icons'
+import {
+  FaGithub,
+  BiArrowDownCircle,
+  BiArrowUpCircle,
+  FaMoon,
+  FaSun,
+  HiSolidMail
+} from 'oh-vue-icons/icons'
 
-addIcons(FaGithub, BiArrowDownCircle, BiArrowUpCircle, FaMoon, FaSun)
+addIcons(FaGithub, BiArrowDownCircle, BiArrowUpCircle, FaMoon, FaSun, HiSolidMail)
 
 const app = createApp(App)
 
