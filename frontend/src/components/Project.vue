@@ -6,7 +6,8 @@ defineProps({
   description: String,
   technologies: Array as () => string[],
   link: String,
-  id: String
+  id: String,
+  path: String
 })
 const curIndex = ref(0)
 </script>
@@ -38,8 +39,13 @@ const curIndex = ref(0)
           </div>
         </div>
       </div>
-      <div class="link">
-        <a :href="link">Repo</a>
+      <div class="linkContainer">
+        <div class="link">
+          <a :href="link">Repo</a>
+        </div>
+        <div v-if="path" class="link">
+          <a :href="`https://${path}.jakerichards.info`">Live Demo</a>
+        </div>
       </div>
     </div>
   </div>
@@ -57,6 +63,7 @@ const curIndex = ref(0)
   height: 550px;
   transition: all 0.2s ease-in-out;
   padding: 30px;
+  padding-bottom: 15px;
 
   cursor: pointer;
 }
@@ -122,15 +129,26 @@ img {
   height: 35%;
 }
 
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .link {
   display: flex;
+  flex-direction: column;
   align-self: center;
   width: fit-content;
   background-color: var(--primary);
   border-radius: 1rem;
   padding: 0.25rem 0.5rem;
+  margin-bottom: 5px;
   a {
     color: var(--background);
+    text-align: center;
   }
 }
 
