@@ -69,11 +69,11 @@ const handleKeyPress = (event: KeyboardEvent) => {
           'Django',
           'PostgreSQL',
           'Docker',
-          'Google Maps API',
-          'Google Places API',
-          'OpenAI API',
-          'SeatGeek API',
-          'Ticketmaster API'
+          'Google Maps',
+          'Google Places',
+          'OpenAI',
+          'SeatGeek',
+          'Ticketmaster'
         ]"
         link="https://github.com/jakeyjakeyy/cityplanner"
         path="planner"
@@ -84,13 +84,12 @@ const handleKeyPress = (event: KeyboardEvent) => {
       />
       <Project
         title="Dwarf Fortress Chronicles"
-        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, while communicating with the OpenAI API to generate content for the user's game data."
-        :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI API']"
+        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, communicating with the OpenAI API to generate content for the user's game data. Contains social media elements with comments, ratings, favorites, and user profiles."
+        :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI']"
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
         @click="toggleActive('dfchronicles')"
         id="dfchronicles"
         tabindex="0"
-        path="chronicles"
         @keypress="handleKeyPress"
       />
     </div>
