@@ -35,7 +35,7 @@ def check_cache(repo_name, forced=False):
             return cache
         elif forced:
             logger.info(
-                f"{datetime.now(timezone.utc)} - check_cahce: Sending forced cached data for {repo_name}"
+                f"{datetime.now(timezone.utc)} - check_cache: Sending forced cached data for {repo_name}"
             )
             return cache
     return None

@@ -26,6 +26,8 @@ const chartData = ref({
 const currentTime = new Date()
 let lastActive: Date | null = new Date(githubInfoData.value.lastActive)
 const timeDifference = currentTime.getTime() - lastActive.getTime()
+const lastActiveRef = ref<HTMLElement | null>(null)
+const pieChartRef = ref<HTMLElement | null>(null)
 
 const formatTimeDifference = (ms: number) => {
   const seconds = Math.floor(ms / 1000)
@@ -42,10 +44,12 @@ const formatTimeDifference = (ms: number) => {
 const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifference))
 
 watch(
+  // watch id for changes and update data
   () => props.id,
   async () => {
     if (props.id) {
-      console.log(props.id)
+      toggleActiveAnimation('hide')
+      // get repo info
       githubInfoData.value = await fetch(`${backendUrl}/api/githubinfo/${props.id}`).then((res) =>
         res.json()
       )
@@ -63,7 +67,8 @@ watch(
         lastActive = new Date(githubInfoData.value.lastActive)
       }
     } else {
-      console.log('no id')
+      toggleActiveAnimation('show')
+      // If no repo id is provided, get all public repo info combined
       githubInfoData.value = await fetch(`${backendUrl}/api/githubinfo/public`).then((res) =>
         res.json()
       )
@@ -79,14 +84,31 @@ watch(
     }
   }
 )
+
+// Animation toggler for piechart and lastActive
+const toggleActiveAnimation = (visibility: String) => {
+  if (lastActiveRef.value !== null && pieChartRef.value !== null) {
+    if (visibility === 'show') {
+      lastActiveRef.value.classList.remove('animateOut')
+      lastActiveRef.value.classList.add('animateIn')
+      pieChartRef.value.classList.add('slideLeft')
+      pieChartRef.value.classList.remove('slideRight')
+    } else {
+      lastActiveRef.value.classList.add('animateOut')
+      lastActiveRef.value.classList.remove('animateIn')
+      pieChartRef.value.classList.add('slideRight')
+      pieChartRef.value.classList.remove('slideLeft')
+    }
+  }
+}
 </script>
 
 <template>
   <div class="githubInfo">
-    <div class="languages">
+    <div class="languages" ref="pieChartRef">
       <PieChart :data="chartData" :size="200" />
     </div>
-    <div v-if="lastActive" class="lastActive">
+    <div class="lastActive" ref="lastActiveRef">
       <h4>Last Active</h4>
       <p>{{ timeDifferenceFormatted }}</p>
     </div>
@@ -115,5 +137,59 @@ watch(
   justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+
+.animateIn {
+  animation: animateIn 0.75s;
+}
+
+.animateOut {
+  animation: animateOut 0.75s forwards;
+}
+
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.slideRight {
+  animation: slideRight 0.75s forwards;
+}
+
+.slideLeft {
+  animation: slideLeft 0.75s;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(35%);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(35%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 </style>
