@@ -10,14 +10,15 @@
             <h3 class="listHead">About</h3>
             <div class="cardBody">
               <p>
-                I am a passionate and motivated software developer proficient in languages and
-                technologies such as Python, TypeScript, Javascript, React, Vue, Django, and more.
-                Creating infrastructure and backend solutions is very satisfying to me, and I am
-                always looking for new ways to improve my skills and learn the latest technologies.
+                I am a passionate and motivated software developer, proficient in languages and
+                technologies such as Python, TypeScript, JavaScript, React, Vue, Django, and more.
+                Solving unique challenges and contributing meaningful code is immensely satisfying
+                to me, and I am continually seeking opportunities to enhance my skills and learn the
+                latest technologies.
               </p>
               <br />
               <p>
-                The opportunity to constantly learn and improve my skills as a developer drives me
+                The opportunity to constantly learn and improve myself as a developer drives me
                 every day, and I am proud to hold certificates from Harvard's CS50, in both
                 <a
                   href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"
@@ -32,17 +33,17 @@
               </p>
               <br />
               <p>
-                I have worked in food service for many years, including a team management position
-                as a Shift Lead at Starbucks. I have been hard at work learning and improving my
-                skills as a developer, and I am excited to bring my passion for technology and
-                problem solving to a new career in software development.
+                Before transitioning into software development, I gained valuable teamwork and
+                leadership skills in the dynamic environment of food service, including a management
+                position at Starbucks. I have been hard at work turning my passion of programming
+                and technology into my career.
               </p>
               <br />
               <p>
-                When programming, I enjoy identifying and overcoming challenges, and making
-                meaningful contributions to projects that improve lives or simply bring joy. Beyond
-                the computer, I have a passion for music, watching sports, and keeping up with
-                updates in technology and science.
+                When programming, I enjoy identifying and overcoming challenges, making meaningful
+                contributions, and collaborating with others who are passionate about what they do.
+                Beyond the computer, I have a enjoy music, watching sports, and keeping up with the
+                latest in technology and science.
               </p>
             </div>
           </div>
