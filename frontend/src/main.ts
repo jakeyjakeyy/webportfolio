@@ -13,10 +13,21 @@ import {
   BiArrowUpCircle,
   FaMoon,
   FaSun,
-  HiSolidMail
+  HiSolidMail,
+  BiTelephoneFill,
+  BiFileEarmarkPdfFill
 } from 'oh-vue-icons/icons'
 
-addIcons(FaGithub, BiArrowDownCircle, BiArrowUpCircle, FaMoon, FaSun, HiSolidMail)
+addIcons(
+  FaGithub,
+  BiArrowDownCircle,
+  BiArrowUpCircle,
+  FaMoon,
+  FaSun,
+  HiSolidMail,
+  BiTelephoneFill,
+  BiFileEarmarkPdfFill
+)
 
 const app = createApp(App)
 
