@@ -5,6 +5,7 @@ let contentSelection = ref('home')
 let homeElement: HTMLElement | null = null
 let aboutElement: HTMLElement | null = null
 let projectElement: HTMLElement | null = null
+let resumeElement: HTMLElement | null = null
 let arrowUpElement: HTMLElement | null = null
 let arrowDownElement: HTMLElement | null = null
 
@@ -15,6 +16,9 @@ const up = () => {
   } else if (contentSelection.value === 'projects') {
     aboutElement?.scrollIntoView({ behavior: 'smooth' })
     contentSelection.value = 'about'
+  } else if (contentSelection.value === 'resume') {
+    projectElement?.scrollIntoView({ behavior: 'smooth' })
+    contentSelection.value = 'projects'
   }
 }
 const down = () => {
@@ -24,14 +28,19 @@ const down = () => {
   } else if (contentSelection.value === 'about') {
     projectElement?.scrollIntoView({ behavior: 'smooth' })
     contentSelection.value = 'projects'
+  } else if (contentSelection.value === 'projects') {
+    resumeElement?.scrollIntoView({ behavior: 'smooth' })
+    contentSelection.value = 'resume'
   }
 }
 
 onscroll = () => {
-  if (homeElement && aboutElement && projectElement) {
+  if (homeElement && aboutElement && projectElement && resumeElement) {
     const homeRect = homeElement.getBoundingClientRect()
     const aboutRect = aboutElement.getBoundingClientRect()
     const projectRect = projectElement.getBoundingClientRect()
+    const resumeRect = resumeElement.getBoundingClientRect()
+
     if (homeRect.top === 0 || homeRect.bottom >= window.innerHeight / 2) {
       contentSelection.value = 'home'
       arrowUpElement?.classList.remove('arrowUpAppear')
@@ -57,7 +66,16 @@ onscroll = () => {
       }
     } else if (projectRect.top === 0 || projectRect.bottom >= window.innerHeight / 2) {
       contentSelection.value = 'projects'
+      if (arrowDownElement?.classList.contains('arrowDownDisappear')) {
+        arrowUpElement?.classList.remove('arrowUpCentered')
+        arrowUpElement?.classList.add('arrowUpFromCenter')
+        arrowDownElement?.classList.remove('arrowDownDisappear')
+        arrowDownElement?.classList.add('arrowDownAppear')
+      }
+    } else if (resumeRect.top === 0 || resumeRect.bottom >= window.innerHeight / 2) {
+      contentSelection.value = 'resume'
       arrowUpElement?.classList.remove('arrowUpAppear')
+      arrowUpElement?.classList.remove('arrowUpFromCenter')
       arrowUpElement?.classList.add('arrowUpCentered')
       arrowDownElement?.classList.remove('arrowDownFromCenter')
       arrowDownElement?.classList.add('arrowDownDisappear')
@@ -79,6 +97,7 @@ onload = () => {
   homeElement = document.getElementById('homeContainer')
   aboutElement = document.getElementById('aboutContainer')
   projectElement = document.getElementById('projectContainer')
+  resumeElement = document.getElementById('resumeContainer')
   arrowUpElement = document.getElementById('arrowUp')
   arrowDownElement = document.getElementById('arrowDown')
   arrowDownElement?.classList.remove('arrowDownAppear')
