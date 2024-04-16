@@ -15,7 +15,14 @@ import {
   FaSun,
   HiSolidMail,
   BiTelephoneFill,
-  BiFileEarmarkPdfFill
+  BiFileEarmarkPdfFill,
+  BiHouse,
+  BiHouseFill,
+  BiPerson,
+  BiCodeSlash,
+  BiFileEarmarkText,
+  BiPersonFill,
+  BiFileEarmarkTextFill
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -26,7 +33,14 @@ addIcons(
   FaSun,
   HiSolidMail,
   BiTelephoneFill,
-  BiFileEarmarkPdfFill
+  BiFileEarmarkPdfFill,
+  BiHouse,
+  BiHouseFill,
+  BiPerson,
+  BiPersonFill,
+  BiCodeSlash,
+  BiFileEarmarkText,
+  BiFileEarmarkTextFill
 )
 
 const app = createApp(App)

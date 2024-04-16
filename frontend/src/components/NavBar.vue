@@ -34,6 +34,18 @@ const down = () => {
   }
 }
 
+const teleport = (location: String) => {
+  if (location === 'home') {
+    homeElement?.scrollIntoView({ behavior: 'smooth' })
+  } else if (location === 'about') {
+    aboutElement?.scrollIntoView({ behavior: 'smooth' })
+  } else if (location === 'projects') {
+    projectElement?.scrollIntoView({ behavior: 'smooth' })
+  } else if (location === 'resume') {
+    resumeElement?.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
 onscroll = () => {
   if (homeElement && aboutElement && projectElement && resumeElement) {
     const homeRect = homeElement.getBoundingClientRect()
@@ -107,6 +119,36 @@ onload = () => {
 
 <template>
   <div class="navContainer">
+    <div class="tabsContainer">
+      <div class="tabs">
+        <div class="tab" @click="teleport('home')">
+          <v-icon v-if="contentSelection == 'home'" name="bi-house-fill" scale="2" color="teal" />
+          <v-icon v-else name="bi-house" scale="2" />
+        </div>
+        <div class="tab" @click="teleport('about')">
+          <v-icon v-if="contentSelection == 'about'" name="bi-person-fill" scale="2" color="teal" />
+          <v-icon v-else name="bi-person" scale="2" />
+        </div>
+        <div class="tab" @click="teleport('projects')">
+          <v-icon
+            v-if="contentSelection == 'projects'"
+            name="bi-code-slash"
+            scale="2"
+            color="teal"
+          />
+          <v-icon v-else name="bi-code-slash" scale="2" />
+        </div>
+        <div class="tab" @click="teleport('resume')">
+          <v-icon
+            v-if="contentSelection == 'resume'"
+            name="bi-file-earmark-text-fill"
+            scale="2"
+            color="teal"
+          />
+          <v-icon v-else name="bi-file-earmark-text" scale="2" />
+        </div>
+      </div>
+    </div>
     <div class="themeContainer">
       <ThemeSelector />
     </div>
@@ -120,6 +162,55 @@ onload = () => {
 </template>
 
 <style scoped>
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 60px;
+  z-index: 100;
+  color: var(--text);
+}
+.hidden {
+  opacity: 0;
+}
+
+#arrowUp,
+#arrowDown {
+  cursor: pointer;
+  position: absolute;
+}
+
+.themeContainer {
+  position: absolute;
+  top: 0;
+  margin-top: 25px;
+}
+
+.tabsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 5vh;
+}
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.tab {
+  cursor: pointer;
+}
 @keyframes arrowUpAppear {
   0% {
     opacity: 0;
@@ -229,34 +320,5 @@ onload = () => {
 
 .arrowDownDisappear {
   animation: arrowDownDisappear 0.5s ease-in-out forwards;
-}
-
-.navContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 60px;
-  z-index: 100;
-  color: var(--text);
-}
-.hidden {
-  opacity: 0;
-}
-
-#arrowUp,
-#arrowDown {
-  cursor: pointer;
-  position: absolute;
-}
-
-.themeContainer {
-  position: absolute;
-  top: 0;
-  margin-top: 25px;
 }
 </style>
