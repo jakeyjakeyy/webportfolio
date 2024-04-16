@@ -78,16 +78,6 @@ import PDFViewer from './PDFViewer.vue'
   }
 }
 
-@media screen and (max-width: 768px) {
-  #resumeContainer {
-    padding: 0 1rem 0;
-  }
-}
-
-#title {
-  margin: 2vh;
-}
-
 .content {
   display: flex;
   flex-direction: row;
@@ -98,5 +88,34 @@ import PDFViewer from './PDFViewer.vue'
   background: var(--color-background);
   border-radius: 1rem;
   margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  #title {
+    text-align: center;
+  }
+
+  #resumeContainer {
+    padding: 0 1rem 0;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .contactLinks {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .linkTitle {
+    width: 100%;
+  }
+}
+
+#title {
+  margin: 2vh;
 }
 </style>

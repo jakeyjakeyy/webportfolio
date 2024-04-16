@@ -35,7 +35,7 @@ const handleKeyPress = (event: KeyboardEvent) => {
 
 <template>
   <div id="projectContainer">
-    <h3>Projects</h3>
+    <h2>Projects</h2>
     <div class="githubInfoContainer">
       <Suspense>
         <githubInfo :id="projectActive" />

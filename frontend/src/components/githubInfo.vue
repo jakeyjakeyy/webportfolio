@@ -122,15 +122,6 @@ const toggleActiveAnimation = (visibility: String) => {
   padding: 1rem;
 }
 
-@media (max-width: 768px) {
-  .githubInfo {
-    flex-direction: column;
-  }
-  .lastActive {
-    margin-top: 1rem;
-  }
-}
-
 .lastActive {
   display: flex;
   flex-direction: column;
@@ -190,6 +181,39 @@ const toggleActiveAnimation = (visibility: String) => {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .githubInfo {
+    flex-direction: column;
+  }
+  .lastActive {
+    margin-top: 1rem;
+  }
+  .slideRight {
+    animation: slideDown 0.75s forwards;
+  }
+  .slideLeft {
+    animation: slideUp 0.75s forwards;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(25%);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(25%);
+  }
+  to {
+    transform: translateY(0%);
   }
 }
 </style>
