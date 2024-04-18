@@ -58,6 +58,7 @@ h3 {
   height: 100vh;
   min-height: fit-content;
   background-color: var(--color-background);
+  padding: 0 3rem 0;
 }
 .description {
   display: flex;
