@@ -19,7 +19,7 @@
 
 <style scoped>
 footer {
-  width: 100%;
+  width: 100vw;
   height: 2.5rem;
   background-color: var(--primary);
   display: flex;

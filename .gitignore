@@ -6,3 +6,4 @@ docker-compose.yml
 backend/backend/settings.py
 frontend/Dockerfile
 data/db/
+deploy.sh
