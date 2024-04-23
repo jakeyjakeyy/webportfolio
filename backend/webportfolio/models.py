@@ -8,4 +8,4 @@ class GithubInfoCache(models.Model):
     cache_time = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.repo
+        return f"{self.repo} - {self.cache_time}"
