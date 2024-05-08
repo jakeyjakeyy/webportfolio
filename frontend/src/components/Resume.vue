@@ -12,25 +12,31 @@ import PDFViewer from './PDFViewer.vue'
         </div>
         <div class="linkItem">
           <a href="mailto:contact@jakerichards.info" aria-label="email">
-            <v-icon name="hi-solid-mail" scale="1.25" color="white" />
+            <v-icon name="hi-solid-mail" scale="1.25" />
           </a>
           <a href="mailto:contact@jakerichards.info" aria-label="email">
             <p>contact@jakerichards.info</p>
           </a>
         </div>
         <div class="linkItem">
-          <v-icon name="bi-telephone-fill" scale="1.25" color="white" />
+          <v-icon name="bi-telephone-fill" scale="1.25" />
           <p>(408) 713-8181</p>
         </div>
         <div class="linkItem">
+          <a href="https://www.linkedin.com/in/jakerichards-info/" aria-label="linkedin">
+            <v-icon name="co-linkedin" scale="1.25" />
+          </a>
+          <a href="https://www.linkedin.com/in/jakerichards-info/"><p>LinkedIn</p></a>
+        </div>
+        <div class="linkItem">
           <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
-            <v-icon name="fa-github" scale="1.25" color="white" />
+            <v-icon name="fa-github" scale="1.25" />
           </a>
           <a href="https://www.github.com/jakeyjakeyy"><p>GitHub</p></a>
         </div>
         <div class="linkItem">
           <a href="https://www.jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume">
-            <v-icon name="bi-file-earmark-pdf-fill" scale="1.25" color="white" />
+            <v-icon name="bi-file-earmark-pdf-fill" scale="1.25" />
           </a>
           <a href="https://www.jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume"
             ><p>Resume</p>
@@ -71,6 +77,9 @@ import PDFViewer from './PDFViewer.vue'
   p {
     color: var(--text);
     margin-left: 1rem;
+  }
+  a {
+    color: var(--text);
   }
   a:hover,
   p:hover {

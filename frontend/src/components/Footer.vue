@@ -13,6 +13,11 @@
           <v-icon name="hi-solid-mail" scale="1.25" />
         </a>
       </div>
+      <div class="icon">
+        <a href="https://www.linkedin.com/in/jakerichards-info/" aria-label="linkedin">
+          <v-icon name="co-linkedin" scale="1.25" />
+        </a>
+      </div>
     </div>
   </footer>
 </template>
