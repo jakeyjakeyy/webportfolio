@@ -22,7 +22,8 @@ import {
   BiCodeSlash,
   BiFileEarmarkText,
   BiPersonFill,
-  BiFileEarmarkTextFill
+  BiFileEarmarkTextFill,
+  CoLinkedin
 } from 'oh-vue-icons/icons'
 
 addIcons(
@@ -40,7 +41,8 @@ addIcons(
   BiPersonFill,
   BiCodeSlash,
   BiFileEarmarkText,
-  BiFileEarmarkTextFill
+  BiFileEarmarkTextFill,
+  CoLinkedin
 )
 
 const app = createApp(App)
