@@ -35,10 +35,10 @@ import PDFViewer from './PDFViewer.vue'
           <a href="https://www.github.com/jakeyjakeyy"><p>GitHub</p></a>
         </div>
         <div class="linkItem">
-          <a href="https://www.jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume">
+          <a href="https://jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume">
             <v-icon name="bi-file-earmark-pdf-fill" scale="1.25" />
           </a>
-          <a href="https://www.jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume"
+          <a href="https://jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume"
             ><p>Resume</p>
           </a>
         </div>
