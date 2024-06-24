@@ -53,16 +53,26 @@
             <h3 class="listHead">Certifications and Education</h3>
             <div class="cardBody">
               <ul>
-                <li>HarvardX</li>
+                <li>HarvardX CS50W</li>
                 <ul>
                   <li>Dates Attended</li>
                   <ul>
                     <li>2023</li>
                   </ul>
-                  <li>Degree</li>
+                  <li>Certification</li>
                   <ul>
-                    <li>Certificate in Web Programming with Python and JavaScript</li>
-                    <li>Certificate in Introduction to Computer Science</li>
+                    <li>Web Programming with Python and JavaScript</li>
+                  </ul>
+                </ul>
+                <li>HarvardX CS50X</li>
+                <ul>
+                  <li>Dates Attended</li>
+                  <ul>
+                    <li>2023</li>
+                  </ul>
+                  <li>Certification</li>
+                  <ul>
+                    <li>Introduction to Computer Science</li>
                   </ul>
                 </ul>
               </ul>
