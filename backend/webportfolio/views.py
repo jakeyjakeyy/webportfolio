@@ -80,7 +80,6 @@ def average_languages(languages):
     for language in languages:
         languages[language] = round((languages[language] / total) * 100)
     # purge any languages that are <= 1%
-    # prevents cluttering the piechart with (generally) default files and languages
     languages = {k: v for k, v in languages.items() if v > 1}
 
     return languages
@@ -106,13 +105,16 @@ class GithubInfo(APIView):
                 # else continue and update the cache
 
             # Get all public repos
-            pub_repos = make_github_request("users/jakeyjakeyy/repos", "public")
-
+            pub_repos = make_github_request("user/repos", "public")
+            logger.info(pub_repos)
             languages = {}
             for repo in pub_repos:
+                rname = repo["name"]
+                if "jakeyjakeyy" != repo["owner"]["login"]:
+                    continue
                 # Get languages for each repo
                 repo_languages = make_github_request(
-                    f"repos/jakeyjakeyy/{repo['name']}/languages", repo["name"]
+                    f"repos/jakeyjakeyy/{rname}/languages", rname
                 )
                 for language in repo_languages:
                     # Tally up the languages
@@ -121,7 +123,7 @@ class GithubInfo(APIView):
                     else:
                         languages[language] = repo_languages[language]
 
-            repo_languages = average_languages(languages)
+            languages = average_languages(languages)
 
             # Get last activity
             activity = make_github_request("users/jakeyjakeyy/events")
