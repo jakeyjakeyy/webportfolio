@@ -4,7 +4,7 @@ backend/webportfolio/__pycache__/
 backend/webportfolio.log
 docker-compose.yml
 backend/backend/settings.py
-frontend/Dockerfile
+Dockerfile
 data/db/
 deploy.sh
 venv/
