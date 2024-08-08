@@ -5,5 +5,6 @@
       "scheme": "file",
       "pattern": "frontend/src/views/ContentView.vue"
     }
-  ]
+  ],
+  "cmake.ignoreCMakeListsMissing": true
 }
