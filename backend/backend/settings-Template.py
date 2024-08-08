@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["jakerichards.info", "146.190.38.15"]
+ALLOWED_HOSTS = ["jakerichards.info", "www.jakerichards.info"]
 
 
 # Application definition
@@ -85,9 +85,9 @@ WSGI_APPLICATION = "backend.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "webportfoliopostgres",
+        "NAME": os.getenv("POSTGRES_DB"),
+        "USER": os.getenv("POSTGRES_USER"),
+        "PASSWORD": os.getenv("POSTGRES_PASSWORD"),
         "HOST": "db",
         "PORT": "5432",
     }
@@ -129,17 +129,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_ROOT = "/var/www/static/"
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-CORS_ALLOWED_ORIGINS = [
-    "https://jakerichards.info",
-    "https://www.jakerichards.info"
-]
+CORS_ALLOWED_ORIGINS = ["https://jakerichards.info", "https://www.jakerichards.info"]
 CSRF_TRUSTED_ORIGINS = ["https://jakerichards.info", "https://www.jakerichards.info"]
 
 
