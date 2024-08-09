@@ -45,8 +45,8 @@ import StickyTitle from './StickyTitle.vue'
               <p>
                 When programming, I enjoy identifying and overcoming challenges, making meaningful
                 contributions, and collaborating with others who are passionate about what they do.
-                Beyond the computer, I have a enjoy music, watching sports, and keeping up with the
-                latest in technology and science.
+                Beyond the computer, I enjoy listening to and creating music, watching sports, and
+                keeping up with the latest in technology and science.
               </p>
             </div>
           </div>
