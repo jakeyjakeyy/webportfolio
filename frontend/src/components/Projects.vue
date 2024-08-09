@@ -2,6 +2,7 @@
 import { ref, watch } from 'vue'
 import githubInfo from './githubInfo.vue'
 import Project from './Project.vue'
+import StickyTitle from './StickyTitle.vue'
 import dfchronicles from '../../public/dfchronicles.png'
 let projectElements: NodeListOf<Element>
 
@@ -35,7 +36,8 @@ const handleKeyPress = (event: KeyboardEvent) => {
 
 <template>
   <div id="projectContainer">
-    <h2>Projects</h2>
+    <!-- <StickyTitle title="Projects" /> -->
+    <h2 id="title">Projects</h2>
     <div class="githubInfoContainer">
       <Suspense>
         <githubInfo :id="projectActive" />

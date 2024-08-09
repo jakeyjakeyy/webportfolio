@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import StickyTitle from './StickyTitle.vue'
+</script>
 
 <template>
   <div id="aboutContainer">
-    <h2>About Jake</h2>
+    <!-- <StickyTitle title="About Jake" /> -->
+    <h2 id="title">About Jake</h2>
     <div class="listContainer">
       <div class="containerLeft">
         <div class="listDiv" id="top">

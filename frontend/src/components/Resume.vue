@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import StickyTitle from './StickyTitle.vue'
 import PDFViewer from './PDFViewer.vue'
 </script>
 
 <template>
   <div id="resumeContainer">
+    <!-- <StickyTitle title="Resume and Contact" /> -->
     <h2 id="title">Resume and Contact</h2>
     <div class="content">
       <div class="contactLinks">
