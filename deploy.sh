@@ -13,8 +13,8 @@ docker-compose build --no-cache
 
 # Step 2: Tag frontend and backend images
 echo -e "${YELLOW}Step 2: Tagging frontend and backend images...${NC}"
-docker tag "webportfolio_frontend:latest" "docker.io/jakerichards/webportfolio_frontend"
-docker tag "webportfolio_backend:latest" "docker.io/jakerichards/webportfolio_backend"
+docker tag "webportfolio-frontend:latest" "docker.io/jakerichards/webportfolio_frontend"
+docker tag "webportfolio-backend:latest" "docker.io/jakerichards/webportfolio_backend"
 
 # Step 3: Push frontend/backend images
 echo -e "${YELLOW}Step 3: Pushing frontend/backend images...${NC}"
