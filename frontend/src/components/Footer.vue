@@ -19,6 +19,9 @@
         </a>
       </div>
     </div>
+    <div class="version">
+      <p>v1.1.0</p>
+    </div>
   </footer>
 </template>
 
@@ -36,6 +39,13 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.version {
+  position: absolute;
+  right: 1rem;
+  font-size: smaller;
+  color: var(--text);
 }
 
 .icon {

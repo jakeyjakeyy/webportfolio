@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 import requests
 import logging
 from datetime import datetime, timezone
+import json
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -106,11 +107,13 @@ class GithubInfo(APIView):
 
             # Get all public repos
             pub_repos = make_github_request("user/repos", "public")
-            logger.info(pub_repos)
+            # logger.info(json.dumps(pub_repos))
             languages = {}
             for repo in pub_repos:
                 rname = repo["name"]
                 if "jakeyjakeyy" != repo["owner"]["login"]:
+                    continue
+                if repo["fork"] == True:
                     continue
                 # Get languages for each repo
                 repo_languages = make_github_request(
