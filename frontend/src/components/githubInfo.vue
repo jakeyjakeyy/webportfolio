@@ -109,7 +109,7 @@ const toggleActiveAnimation = (visibility: String) => {
       <PieChart :data="chartData" :size="200" />
     </div>
     <div class="lastActive" ref="lastActiveRef">
-      <h4>Last Active</h4>
+      <h4>Last Commit</h4>
       <p>{{ timeDifferenceFormatted }}</p>
     </div>
   </div>
