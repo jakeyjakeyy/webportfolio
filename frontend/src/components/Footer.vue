@@ -4,17 +4,21 @@
   <footer>
     <div class="footerIcons">
       <div class="icon">
-        <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
+        <a href="https://www.github.com/jakeyjakeyy" aria-label="github" target="_blank">
           <v-icon name="fa-github" scale="1.25" />
         </a>
       </div>
       <div class="icon">
-        <a href="mailto:contact@jakerichards.info" aria-label="email">
+        <a href="mailto:contact@jakerichards.info" aria-label="email" target="_blank">
           <v-icon name="hi-solid-mail" scale="1.25" />
         </a>
       </div>
       <div class="icon">
-        <a href="https://www.linkedin.com/in/jakerichards-info/" aria-label="linkedin">
+        <a
+          href="https://www.linkedin.com/in/jakerichards-info/"
+          aria-label="linkedin"
+          target="_blank"
+        >
           <v-icon name="co-linkedin" scale="1.25" />
         </a>
       </div>

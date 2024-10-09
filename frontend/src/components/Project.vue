@@ -48,10 +48,10 @@ const curIndex = ref(0)
       </div>
       <div class="linkContainer">
         <div class="link">
-          <a :href="link">Repo</a>
+          <a :href="link" target="_blank">Repo</a>
         </div>
         <div v-if="path" class="link">
-          <a :href="`https://${path}.jakerichards.info`">Live Demo</a>
+          <a :href="`https://${path}.jakerichards.info`" target="_blank">Live Demo</a>
         </div>
       </div>
     </div>

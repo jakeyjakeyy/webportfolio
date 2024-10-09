@@ -25,28 +25,31 @@ import StickyTitle from './StickyTitle.vue'
                 every day, and I am proud to hold certificates from Harvard's CS50, in both
                 <a
                   href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"
+                  target="_blank"
                 >
                   Web Programming with Python and JavaScript</a
                 >
                 and
                 <a
                   href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter"
+                  target="_blank"
                   >Introduction to Computer Science</a
                 >.
               </p>
               <br />
               <p>
-                Before transitioning into software development, I gained valuable teamwork and
-                leadership skills in the dynamic environment of food service, including a management
-                position at Starbucks. I have been hard at work turning my passion of programming
-                and technology into my career.
+                Before pursuing a career in software development, I gained valuable teamwork,
+                leadership, and communication skills in the dynamic environment of food service,
+                including a management position at Starbucks. I have been hard at work turning my
+                passion of programming and technology into my career.
               </p>
               <br />
               <p>
                 When programming, I enjoy identifying and overcoming challenges, making meaningful
-                contributions, and collaborating with others who are passionate about what they do.
-                Beyond the computer, I enjoy listening to and creating music, watching sports, and
-                keeping up with the latest in technology and science.
+                contributions, and collaborating with others who are passionate about what they do
+                and the projects they work on. Beyond the computer, I enjoy listening to and
+                creating music, watching sports, and keeping up with the latest in technology and
+                science.
               </p>
             </div>
           </div>

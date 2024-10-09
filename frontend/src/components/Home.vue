@@ -40,13 +40,14 @@ onMounted(() => {
 
 <style scoped>
 h1 {
-  font-weight: bold;
+  font-weight: 1000;
   position: relative;
   top: -10px;
+  font-size: 6rem;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 #homeContainer {
