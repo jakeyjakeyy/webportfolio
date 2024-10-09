@@ -6,5 +6,6 @@
       "pattern": "frontend/src/views/ContentView.vue"
     }
   ],
-  "cmake.ignoreCMakeListsMissing": true
+  "cmake.ignoreCMakeListsMissing": true,
+  "conventionalCommits.scopes": ["Footer"]
 }
