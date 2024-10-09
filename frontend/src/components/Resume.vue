@@ -13,10 +13,10 @@ import PDFViewer from './PDFViewer.vue'
           <h3>Contact Information and Links</h3>
         </div>
         <div class="linkItem">
-          <a href="mailto:contact@jakerichards.info" aria-label="email">
+          <a href="mailto:contact@jakerichards.info" aria-label="email" target="_blank">
             <v-icon name="hi-solid-mail" scale="1.25" />
           </a>
-          <a href="mailto:contact@jakerichards.info" aria-label="email">
+          <a href="mailto:contact@jakerichards.info" aria-label="email" target="_blank">
             <p>contact@jakerichards.info</p>
           </a>
         </div>
@@ -25,22 +25,35 @@ import PDFViewer from './PDFViewer.vue'
           <p>(408) 713-8181</p>
         </div>
         <div class="linkItem">
-          <a href="https://www.linkedin.com/in/jakerichards-info/" aria-label="linkedin">
+          <a
+            href="https://www.linkedin.com/in/jakerichards-info/"
+            aria-label="linkedin"
+            target="_blank"
+          >
             <v-icon name="co-linkedin" scale="1.25" />
           </a>
-          <a href="https://www.linkedin.com/in/jakerichards-info/"><p>LinkedIn</p></a>
+          <a href="https://www.linkedin.com/in/jakerichards-info/" target="_blank"
+            ><p>LinkedIn</p></a
+          >
         </div>
         <div class="linkItem">
-          <a href="https://www.github.com/jakeyjakeyy" aria-label="github">
+          <a href="https://www.github.com/jakeyjakeyy" aria-label="github" target="_blank">
             <v-icon name="fa-github" scale="1.25" />
           </a>
-          <a href="https://www.github.com/jakeyjakeyy"><p>GitHub</p></a>
+          <a href="https://www.github.com/jakeyjakeyy" target="_blank"><p>GitHub</p></a>
         </div>
         <div class="linkItem">
-          <a href="https://jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume">
+          <a
+            href="https://jakerichards.info/static/jakeRichardsResume.pdf"
+            aria-label="resume"
+            target="_blank"
+          >
             <v-icon name="bi-file-earmark-pdf-fill" scale="1.25" />
           </a>
-          <a href="https://jakerichards.info/static/jakeRichardsResume.pdf" aria-label="resume"
+          <a
+            href="https://jakerichards.info/static/jakeRichardsResume.pdf"
+            aria-label="resume"
+            target="_blank"
             ><p>Resume</p>
           </a>
         </div>

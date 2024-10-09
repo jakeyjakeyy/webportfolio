@@ -25,12 +25,14 @@ import StickyTitle from './StickyTitle.vue'
                 every day, and I am proud to hold certificates from Harvard's CS50, in both
                 <a
                   href="https://certificates.cs50.io/88d1f811-c6f5-4bb9-9411-acbea8dae793.pdf?size=letter"
+                  target="_blank"
                 >
                   Web Programming with Python and JavaScript</a
                 >
                 and
                 <a
                   href="https://certificates.cs50.io/5e16f81f-9ee8-458c-b73a-4c89f53a5321.pdf?size=letter"
+                  target="_blank"
                   >Introduction to Computer Science</a
                 >.
               </p>
