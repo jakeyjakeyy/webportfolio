@@ -38,17 +38,18 @@ import StickyTitle from './StickyTitle.vue'
               </p>
               <br />
               <p>
-                Before transitioning into software development, I gained valuable teamwork and
-                leadership skills in the dynamic environment of food service, including a management
-                position at Starbucks. I have been hard at work turning my passion of programming
-                and technology into my career.
+                Before pursuing a career in software development, I gained valuable teamwork,
+                leadership, and communication skills in the dynamic environment of food service,
+                including a management position at Starbucks. I have been hard at work turning my
+                passion of programming and technology into my career.
               </p>
               <br />
               <p>
                 When programming, I enjoy identifying and overcoming challenges, making meaningful
-                contributions, and collaborating with others who are passionate about what they do.
-                Beyond the computer, I enjoy listening to and creating music, watching sports, and
-                keeping up with the latest in technology and science.
+                contributions, and collaborating with others who are passionate about what they do
+                and the projects they work on. Beyond the computer, I enjoy listening to and
+                creating music, watching sports, and keeping up with the latest in technology and
+                science.
               </p>
             </div>
           </div>
