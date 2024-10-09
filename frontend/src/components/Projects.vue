@@ -86,7 +86,7 @@ const handleKeyPress = (event: KeyboardEvent) => {
       />
       <Project
         title="Dwarf Fortress Chronicles"
-        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, communicating with the OpenAI API to generate content for the user's game data. Contains social media elements with comments, ratings, favorites, and user profiles."
+        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, communicating with the OpenAI API to generate content from the user's game data. Contains social media elements with comments, ratings, favorites, and user profiles."
         :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI']"
         link="https://www.github.com/jakeyjakeyy/dfchronicles"
         @click="toggleActive('dfchronicles')"

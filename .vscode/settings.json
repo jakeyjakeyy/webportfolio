@@ -7,5 +7,5 @@
     }
   ],
   "cmake.ignoreCMakeListsMissing": true,
-  "conventionalCommits.scopes": ["Footer", "About"]
+  "conventionalCommits.scopes": ["Footer", "About", "Projects"]
 }
