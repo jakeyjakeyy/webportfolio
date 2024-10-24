@@ -57,7 +57,7 @@ const handleKeyPress = (event: KeyboardEvent) => {
           'Web Crypto API'
         ]"
         link="https://github.com/jakeyjakeyy/password_manager"
-        path="password_manager"
+        path="vault"
         @click="toggleActive('password_manager')"
         id="password_manager"
         tabindex="0"
