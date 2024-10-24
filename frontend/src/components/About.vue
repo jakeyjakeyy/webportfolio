@@ -48,8 +48,8 @@ import StickyTitle from './StickyTitle.vue'
                 When programming, I enjoy identifying and overcoming challenges, making meaningful
                 contributions, and collaborating with others who are passionate about what they do
                 and the projects they work on. Beyond the computer, I enjoy listening to and
-                creating music, watching sports, and keeping up with the latest in technology and
-                science.
+                creating music, watching sports, and keeping up with the latest in science and
+                technology.
               </p>
             </div>
           </div>
@@ -188,10 +188,12 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 85%;
 }
 
 .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--primary);
   border-radius: 1rem;
   padding: 1rem;
