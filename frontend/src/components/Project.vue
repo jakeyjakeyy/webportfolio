@@ -175,7 +175,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: start;
+  text-align: center;
   padding-left: 1rem;
 }
 
