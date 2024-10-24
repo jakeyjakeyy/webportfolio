@@ -45,35 +45,35 @@ const handleKeyPress = (event: KeyboardEvent) => {
     </div>
     <div class="projects">
       <Project
-        title="Web Portfolio"
-        description="This website! A web app that allows users to view my projects, information, and contact me."
+        title="Password Manager"
+        description="'The Vault' is a password manager that enables users to securely store, generate, and manage their passwords. Built following the NIST's Guideline for Using Cryptographic Standards in the Federal Government."
         :technologies="[
           'Vue',
-          'Vite',
           'Typescript',
+          'Django',
+          'Django REST Framework',
           'Docker',
           'PostgreSQL',
-          'Caching',
-          'DigitalOcean Droplet'
+          'Web Crypto API'
         ]"
-        link="https://github.com/jakeyjakeyy/webportfolio"
-        @click="toggleActive('webportfolio')"
-        id="webportfolio"
+        link="https://github.com/jakeyjakeyy/password_manager"
+        path="password_manager"
+        @click="toggleActive('password_manager')"
+        id="password_manager"
         tabindex="0"
         @keypress="handleKeyPress"
       />
-
       <Project
         title="City Trip Planner"
-        description="A web app that allows users to create an itinerary from a custom generated list of locations to visit based on their interests."
+        description="A web app that helps users plan city trips by discovering upcoming live events, nearby restaurants, and attractions. It uses OpenAI to generate personalized itineraries based on user preferences, and displays each option on an interactive map."
         :technologies="[
           'React',
           'Django',
-          'PostgreSQL',
           'Docker',
+          'PostgreSQL',
           'Google Maps',
           'Google Places',
-          'OpenAI',
+          'OpenAI API',
           'SeatGeek',
           'Ticketmaster'
         ]"
@@ -85,12 +85,20 @@ const handleKeyPress = (event: KeyboardEvent) => {
         @keypress="handleKeyPress"
       />
       <Project
-        title="Dwarf Fortress Chronicles"
-        description="A web app that allows users to view, create,  and share stories from the game Dwarf Fortress, communicating with the OpenAI API to generate content from the user's game data. Contains social media elements with comments, ratings, favorites, and user profiles."
-        :technologies="['React', 'Django', 'PostgreSQL', 'Docker', 'OpenAI']"
-        link="https://www.github.com/jakeyjakeyy/dfchronicles"
-        @click="toggleActive('dfchronicles')"
-        id="dfchronicles"
+        title="Web Portfolio"
+        description="This website! My personal portfolio where you can explore my projects, learn more about me, and find my resume and contact information."
+        :technologies="[
+          'Vue',
+          'Django',
+          'Typescript',
+          'Docker',
+          'PostgreSQL',
+          'Self-Hosted',
+          'Nginx'
+        ]"
+        link="https://github.com/jakeyjakeyy/webportfolio"
+        @click="toggleActive('webportfolio')"
+        id="webportfolio"
         tabindex="0"
         @keypress="handleKeyPress"
       />

@@ -146,7 +146,7 @@ class GithubInfo(APIView):
 
         else:
             # We are getting the languages for a specific repo
-            repos = ["cityplanner", "dfchronicles", "webportfolio"]
+            repos = ["cityplanner", "password_manager", "webportfolio"]
             if repo not in repos:
                 return Response({"message": "This repo is not available"}, status=404)
             cache = check_cache(repo)
