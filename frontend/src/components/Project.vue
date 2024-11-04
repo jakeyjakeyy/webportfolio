@@ -26,7 +26,7 @@ const curIndex = ref(0)
           <p>{{ description }}</p>
         </div>
         <div class="technologies">
-          <p>Technologies, Features, and APIs:</p>
+          <p class="bold">Technologies, Features, and APIs:</p>
           <div class="tech-list">
             <ul>
               <li v-for="technology in technologies?.slice(0, technologies.length / 2)">
@@ -124,7 +124,6 @@ img {
   height: 100%;
   background-color: var(--secondary);
   border-radius: 50px;
-  padding: 1rem;
 }
 
 .title {
@@ -180,6 +179,8 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 100%;
+  padding: 1rem;
 }
 
 .technologies {
@@ -187,8 +188,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: start;
-  padding-left: 1rem;
+  text-align: center;
 }
 
 .tech-list {
@@ -197,7 +197,5 @@ img {
   justify-content: center;
   align-items: center;
   text-align: start;
-  width: 100%;
-  padding-right: 1rem;
 }
 </style>

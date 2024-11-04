@@ -10,10 +10,13 @@ a {
   transition: background-color 0.5s;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
   }
-
 }
