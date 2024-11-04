@@ -26,7 +26,7 @@ const curIndex = ref(0)
           <p>{{ description }}</p>
         </div>
         <div class="technologies">
-          <div>Technologies, Features, and APIs:</div>
+          <p>Technologies, Features, and APIs:</p>
           <div class="tech-list">
             <ul>
               <li v-for="technology in technologies?.slice(0, technologies.length / 2)">
@@ -51,7 +51,7 @@ const curIndex = ref(0)
           <a :href="link" target="_blank">Repo</a>
         </div>
         <div v-if="path" class="link">
-          <a :href="`https://${path}.jakerichards.info`" target="_blank">Live Demo</a>
+          <a :href="`https://${path}.jakerichards.info`" target="_blank">Live Site</a>
         </div>
       </div>
     </div>
@@ -62,6 +62,7 @@ const curIndex = ref(0)
 .project {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 25%;
   box-sizing: border-box;
   border: 1px solid var(--background);
@@ -133,7 +134,7 @@ img {
   align-content: center;
   font-size: 2rem;
   text-align: center;
-  height: 35%;
+  padding: 1rem;
 }
 
 .linkContainer {
@@ -142,6 +143,7 @@ img {
   justify-content: space-around;
   align-items: center;
   margin-top: 10px;
+  height: 25%;
 }
 
 .link {
@@ -166,8 +168,10 @@ img {
 .body {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
+  align-items: center;
+  overflow-y: auto;
 }
 
 .description {
@@ -176,7 +180,6 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: 1rem;
 }
 
 .technologies {
@@ -186,7 +189,6 @@ img {
   align-items: center;
   text-align: start;
   padding-left: 1rem;
-  height: 50%;
 }
 
 .tech-list {
