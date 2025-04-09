@@ -78,7 +78,6 @@ const handleKeyPress = (event: KeyboardEvent) => {
           'Ticketmaster'
         ]"
         link="https://github.com/jakeyjakeyy/cityplanner"
-        path="planner"
         @click="toggleActive('cityplanner')"
         id="cityplanner"
         tabindex="0"
