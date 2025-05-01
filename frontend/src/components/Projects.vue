@@ -45,6 +45,26 @@ const handleKeyPress = (event: KeyboardEvent) => {
     </div>
     <div class="projects">
       <Project
+        title="Social Media"
+        description="A feature-rich web app that allows users to create accounts, post content, and interact with others through likes and comments. Built with a focus on user experience and scalability."
+        :technologies="[
+          'Vue',
+          'Django',
+          'Django REST Framework',
+          'Docker',
+          'PostgreSQL',
+          'Redis',
+          'WebSockets',
+          'Nginx'
+        ]"
+        link="https://github.com/jakeyjakeyy/social"
+        path="social"
+        @click="toggleActive('social')"
+        id="social"
+        tabindex="0"
+        @keypress="handleKeyPress"
+      />
+      <Project
         title="Password Manager"
         description="'The Vault' is a password manager that enables users to securely store, generate, and manage their passwords. Built following the NIST's Guideline for Using Cryptographic Standards in the Federal Government."
         :technologies="[
@@ -80,24 +100,6 @@ const handleKeyPress = (event: KeyboardEvent) => {
         link="https://github.com/jakeyjakeyy/cityplanner"
         @click="toggleActive('cityplanner')"
         id="cityplanner"
-        tabindex="0"
-        @keypress="handleKeyPress"
-      />
-      <Project
-        title="Web Portfolio"
-        description="This website! My personal portfolio where you can explore my projects, learn more about me, and find my resume and contact information."
-        :technologies="[
-          'Vue',
-          'Django',
-          'Typescript',
-          'Docker',
-          'PostgreSQL',
-          'Self-Hosted',
-          'Nginx'
-        ]"
-        link="https://github.com/jakeyjakeyy/webportfolio"
-        @click="toggleActive('webportfolio')"
-        id="webportfolio"
         tabindex="0"
         @keypress="handleKeyPress"
       />
