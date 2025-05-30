@@ -99,7 +99,6 @@ class GithubInfo(APIView):
                 return Response(
                     {
                         "languagePercentages": cache.language_percentages,
-                        "lastActive": cache.last_active,
                     },
                     status=200,
                 )
@@ -128,25 +127,21 @@ class GithubInfo(APIView):
 
             languages = average_languages(languages)
 
-            # Get last activity
-            activity = make_github_request("users/jakeyjakeyy/events")
-            last_active = activity[0]["created_at"]
 
             save_cache = models.GithubInfoCache.objects.create(
                 repo="public",
                 language_percentages=languages,
-                last_active=last_active,
             )
             save_cache.save()
 
             return Response(
-                {"languagePercentages": languages, "lastActive": last_active},
+                {"languagePercentages": languages},
                 status=200,
             )
 
         else:
             # We are getting the languages for a specific repo
-            repos = ["cityplanner", "password_manager", "webportfolio"]
+            repos = ["cityplanner", "password_manager", "social"]
             if repo not in repos:
                 return Response({"message": "This repo is not available"}, status=404)
             cache = check_cache(repo)

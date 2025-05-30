@@ -23,32 +23,13 @@ const chartData = ref({
   ]
 })
 
-const currentTime = new Date()
-let lastActive: Date | null = new Date(githubInfoData.value.lastActive)
-const timeDifference = currentTime.getTime() - lastActive.getTime()
-const lastActiveRef = ref<HTMLElement | null>(null)
 const pieChartRef = ref<HTMLElement | null>(null)
-
-const formatTimeDifference = (ms: number) => {
-  const seconds = Math.floor(ms / 1000)
-  const minutes = Math.floor(seconds / 60)
-  const hours = Math.floor(minutes / 60)
-  const days = Math.floor(hours / 24)
-
-  if (days > 0) return `${days} days ago`
-  if (hours > 0) return `${hours} hours ago`
-  if (minutes > 0) return `${minutes} minutes ago`
-  return `${seconds} seconds ago`
-}
-
-const timeDifferenceFormatted = computed(() => formatTimeDifference(timeDifference))
 
 watch(
   // watch id for changes and update data
   () => props.id,
   async () => {
     if (props.id) {
-      toggleActiveAnimation('hide')
       // get repo info
       githubInfoData.value = await fetch(`${backendUrl}/api/githubinfo/${props.id}`).then((res) =>
         res.json()
@@ -61,13 +42,7 @@ watch(
           }
         ]
       }
-      if (!githubInfoData.value.lastActive) {
-        lastActive = null
-      } else {
-        lastActive = new Date(githubInfoData.value.lastActive)
-      }
     } else {
-      toggleActiveAnimation('show')
       // If no repo id is provided, get all public repo info combined
       githubInfoData.value = await fetch(`${backendUrl}/api/githubinfo/public`).then((res) =>
         res.json()
@@ -80,22 +55,17 @@ watch(
           }
         ]
       }
-      lastActive = new Date(githubInfoData.value.lastActive)
     }
   }
 )
 
-// Animation toggler for piechart and lastActive
+// Animation toggler for piechart
 const toggleActiveAnimation = (visibility: String) => {
-  if (lastActiveRef.value !== null && pieChartRef.value !== null) {
+  if (pieChartRef.value !== null) {
     if (visibility === 'show') {
-      lastActiveRef.value.classList.remove('animateOut')
-      lastActiveRef.value.classList.add('animateIn')
       pieChartRef.value.classList.add('slideLeft')
       pieChartRef.value.classList.remove('slideRight')
     } else {
-      lastActiveRef.value.classList.add('animateOut')
-      lastActiveRef.value.classList.remove('animateIn')
       pieChartRef.value.classList.add('slideRight')
       pieChartRef.value.classList.remove('slideLeft')
     }
@@ -108,10 +78,6 @@ const toggleActiveAnimation = (visibility: String) => {
     <div class="languages" ref="pieChartRef">
       <PieChart :data="chartData" :size="200" />
     </div>
-    <div class="lastActive" ref="lastActiveRef">
-      <h4>Last Commit</h4>
-      <p>{{ timeDifferenceFormatted }}</p>
-    </div>
   </div>
 </template>
 
@@ -119,14 +85,6 @@ const toggleActiveAnimation = (visibility: String) => {
 .githubInfo {
   display: flex;
   flex-direction: row;
-  padding: 1rem;
-}
-
-.lastActive {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 1rem;
 }
 
@@ -187,9 +145,6 @@ const toggleActiveAnimation = (visibility: String) => {
 @media (max-width: 768px) {
   .githubInfo {
     flex-direction: column;
-  }
-  .lastActive {
-    margin-top: 1rem;
   }
   .slideRight {
     animation: slideDown 0.75s forwards;
