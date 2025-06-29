@@ -58,8 +58,8 @@ const handleKeyPress = (event: KeyboardEvent) => {
           'Nginx'
         ]"
         link="https://github.com/jakeyjakeyy/social"
-        path="social"
         @click="toggleActive('social')"
+        id="social"
         tabindex="0"
         @keypress="handleKeyPress"
       />
@@ -76,8 +76,8 @@ const handleKeyPress = (event: KeyboardEvent) => {
           'Web Crypto API'
         ]"
         link="https://github.com/jakeyjakeyy/password_manager"
-        path="vault"
         @click="toggleActive('password_manager')"
+        id="password_manager"
         tabindex="0"
         @keypress="handleKeyPress"
       />
