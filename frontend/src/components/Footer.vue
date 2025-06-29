@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="version">
-      <p>v1.3.4</p>
+      <p>v1.3.5</p>
     </div>
   </footer>
 </template>
